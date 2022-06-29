@@ -6,3 +6,15 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+
+.pseudo::before {
+  content: '✨';
+}
+
+.pseudo::after {
+  content: '!';
+  display: inline-block;
+  width: 10px;
+  font-style: italic;
+  background-color: pink;
+}
