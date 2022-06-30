@@ -53,3 +53,55 @@ button:active {
 }
 
 /* ▼ WHERE YOUR CODE BEGINS */
+.modal {
+  padding: 32px 40px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+}
+
+.modal-title,
+.modal-desc {
+  text-align: center;
+}
+
+.modal-title {
+  margin-bottom: 4px;
+}
+
+.modal-desc {
+  width: 590px;
+  margin: 0 auto 24px;
+}
+
+.input-group {
+  text-align: center;
+}
+
+.input-group input {
+  width: 200px;
+  height: 36px;
+  padding: 0 16px;
+  margin-right: 8px;
+
+  background-color: #F6F8FA;
+  border: none;
+  border-radius: 4px;
+}
+
+.input-group button {
+  height: 36px;
+  padding: 0 14px;
+  color: #fff;
+  background-color: #2860E1;
+  border: none;
+  border-radius: 4px;
+}
+
+.close-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
