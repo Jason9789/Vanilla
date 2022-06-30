@@ -7,20 +7,18 @@ body {
 }
 
 
-.grandparent {
-  background-color: #1f2d3d;
-  position: relative;
-  height: 600px;
-}
-
 .parent {
-  width: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 1000px;
   margin: 0 auto;
   background-color: #eff2f7;
 }
 
 .child {
-  width: 200px;
+  width: 300px;
   height: 200px;
   line-height: 200px;
   text-align: center;
@@ -29,16 +27,16 @@ body {
 }
 
 .red {
-  position: fixed;
-  bottom: 0;
+  order: 3;
   background-color: red;
 }
 
 .yellow {
+  order: 1;
   background-color: yellow;
-  left: 0;
 }
 
 .blue {
+  order: 2;
   background-color: blue;
 }
