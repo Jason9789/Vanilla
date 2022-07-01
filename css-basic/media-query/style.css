@@ -13,7 +13,7 @@ a {
 }
 
 .landing {
-  background-image: url("./assets/img-bg.jpg");
+  background-image: url("./assets/img-bg.jpeg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -41,3 +41,79 @@ a {
 }
 
 /* ▼ WHERE YOUR CODE BEGINS */
+
+.banner {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #FFC82C;
+}
+
+
+.banner-title a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  width: 100%;
+  height: 64px;
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.landing-title {
+  margin-bottom: 24px;
+  text-align: right;
+}
+
+.landing-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 52px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  border: 2px solid #FFFFFF;
+  border-radius: 16px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .banner {
+    /* bottom 초기화 */
+    bottom: auto; 
+    top: 0;
+    width: 100%;
+  }
+
+  .banner-title a {
+    height: 80px;
+  }
+
+  .landing-title {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .landing-link {
+    font-size: 18px;
+    width: 180px;
+    height: 56px;
+  }
+
+  .landing {
+    align-items: center;
+  }
+}
