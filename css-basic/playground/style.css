@@ -2,99 +2,19 @@
 	box-sizing: border-box;
 }
 
+html {
+  font-size: 20px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #212529;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  text-indent: 50px;
 
-
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #ff4949;
-  font-size: 30px;
-  font-weight: 700;
-  color: white;
-}
-
-.box img {
-  display: block;
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-}
-
-.box::after {
-  content: 'Mobile';
-}
-
-@media screen and (min-width: 576px) {
-  /* CSS 선언 */
-  .box {
-    background-color: #ff5126;
-  }
-
-  .box::after {
-    content: "Landscape Phone";
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .box {
-    background-color: #ffc82c;
-  }
-
-  .box::after {
-    content: "Tablet";
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .box img {
-    animation: rotate 1500ms infinite;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .box {
-    background-color: #13ce66;
-  }
-
-  .box::after {
-    content: "Desktop";
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .box {
-    background-color: #1fb6ff;
-  }
-
-  .box::after {
-    content: "Large Desktop";
-  }
-}
-
-@media screen and (min-width: 1366px) {
-  .box {
-    background-color: #7e5bef;
-  }
-
-  .box::after {
-    content: "Super Large Desktop";
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
 }
