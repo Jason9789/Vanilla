@@ -18,30 +18,33 @@ body {
   height: 100vh;
 }
 
-.box {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  border-radius: 5px;
-  background-color: #0066ff;
-  animation-name: move-box;
-  animation-duration: 2000ms;
-  animation-timing-function: ease-in-out;
-  animation-delay: 1000ms;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 161px;
+  height: 56px;
+  color: #fff;
+  background-color: #212529;
+  margin-right: 16px;
+  border-radius: 100px;
+  border: none;
 }
 
+.cancel-button {
+  background-color: #FF4949;
+  transition: box-shadow 250ms ease-in;
+}
 
-@keyframes move-box {
-  from {
-    top: 0;
-    background-color: #0066ff;
+.cancel-button:hover {
+  box-shadow: 0 10px 16px 0 rgba(255, 73, 73, 0.35);
+}
 
-  }
+.confirm-button {
+  background-color: #13CE66;
+  transition: box-shadow 250ms ease-in;
+}
 
-  to {
-    top: 200px;
-    background-color: #ff4949;
-  }
+.confirm-button:hover {
+  box-shadow: 0 10px 16px 0 rgba(19, 206, 102, 0.35);
 }
