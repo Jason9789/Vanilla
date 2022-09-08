@@ -1,0 +1,190 @@
+#contentWrap{
+    width : 1320px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #F7F8FA;
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+
+.titleSection{
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-bottom : 3px solid #E4E4E4;
+}
+
+.titleSection * {
+    font-family: "Pretendard";
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.mainContent{
+    width : 985px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.title{
+    display: inline-block;
+}
+.titleLeft{
+    width: 60%;
+}
+.titleRight{
+    width: 38%;
+    text-align: right;
+}
+
+#nickname{
+    font-size: 26px;
+    color : #783DF5;
+}
+.comment{
+    font-size: 20px;
+}
+.plusBtn{
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/*-------------------------------------------*/
+#meet_recommendSection{
+    padding-top : 15px
+}
+.content_list{
+    display: inline-block;
+    width: 420px;
+    height: 135px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px 12px 15px 22px;
+    padding: 15px;
+    box-shadow: 0 3px 6px #E4E4E4, 0 3px 8px #E4E4E4;
+    cursor: pointer;
+}
+.content_title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.content_img{
+    width: auto;
+    height: auto;
+    /* border: 1px solid #E4E4E4; */
+    border-radius: 15px;
+}
+.list_img{
+    width: 70px;
+    height: 70px;
+}
+.content_description{
+    font-size: 13px;
+    padding-right: 10px;
+}
+.tagSection{
+    display: flex;
+    justify-content: left;
+}
+.tag{
+    display: flex;
+    height: auto;
+    border: 1px solid #CFD2CF;
+    border-radius: 3px;
+    margin-right: 5px;
+    padding: 3px;
+}
+.tag_img{
+    width: 12px;
+    height: 13px;
+}
+.font_size_10{
+    font-size: 10px;
+}
+
+
+/* ********************* */
+.meet_info{
+    display: flex;
+    justify-content: left;
+    margin-top: 9px;
+    margin-left: 5px;
+}
+.meet_condition{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    margin-left: 5px;
+}
+.divide{
+    padding-top: 2px;
+    width: 8px;
+    height: 15px;
+}
+.condition_bold{
+    margin-left: 6px;
+    margin-right: 8px;
+}
+.condition_common{
+    font-size: 12px;
+}
+.member_ment{
+    font-size: 11px;
+    font-weight: 900;
+}
+.member_cnt{
+    color: #006FD6;
+}
+
+/* ********************* */
+/** 액티비티 태그 SECTION */
+/* ********************* */
+#cate_tag_section{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+}
+#unfold_tag{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.tagItem{
+    width: auto;
+    font-size: 13px;
+    padding: 4px 16px 5px 14px;
+    border: 2px solid #E4E4E4;
+    border-radius: 15px;
+    margin-right: 7px;
+    background-color: white;
+    cursor: pointer;
+}
+.check{
+    background-color: #E4E4E4;
+}
+.tag_plus{
+    margin-left: 25px;
+}
+#plusImg{
+    width: 59px;
+    cursor: pointer;
+}
+
+#fold_tag{
+    margin-top: 8px;
+    width: 100%;
+    height: auto;
+}
+
+
+#tagUl{
+    width: 100%;
+    display: inline-block;
+}
+.tag_li{
+    display: inline-block;
+    height: 31px;
+    margin-top: 8px;
+}
