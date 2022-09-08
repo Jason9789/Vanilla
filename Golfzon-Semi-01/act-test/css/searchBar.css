@@ -1,0 +1,76 @@
+#searchWrap{
+    width : 1320px;
+    height : 85px;
+    border-bottom : 1px solid #E4E4E4;
+    align-items: center;
+    display: flex;
+}
+
+#searchBar{
+    width: 700px;
+    height: 35px;
+    border: 3px solid black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center; /* 좌우 정렬 */
+    align-items: center; /* 수직 정렬 */
+    margin: auto;
+    padding: 9px;
+}
+
+#searchBar *{
+    font-family: 'Pretendard';
+    font-weight : bold;
+}
+
+select{
+    width : 90px;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    color : #B2B3B9;
+    
+}
+select:focus{
+    border: none;
+}
+
+option{
+    width : 200px;
+    height: 30px;
+    background-color: #EBE9E9;
+    color : black;
+}
+
+#category{
+    margin-left: 20px;
+}
+
+.line{
+    margin-top: 4px;
+    margin-left: 25px;
+    margin-right: 25px;
+    height: 80%;
+}
+
+#searchImg{
+    margin-right: 4px;
+    width: 25px;
+    height: 25px;
+}
+
+#searchWord{
+    width : 70%;
+    height: 80%;
+    margin-right: 10px;
+    border: 0px;
+    font-size: 15px;
+    color : #B2B3B9;
+}
+#searchWord::placeholder{
+    color : #B2B3B9;
+}
+#searchWord:focus{
+    outline: none;
+}
+
