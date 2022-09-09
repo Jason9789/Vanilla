@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모임 상세 페이지</title>
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/act-detail.css" />
+  </head>
+  <body>
+    <div id="menuWrap">
+      <div id="logoSection">
+        <a href=""><img src="img/logo.svg" alt="logo img" id="logo_img" /></a>
+      </div>
+      <div id="log_Section">
+        <ul id="beforeLogin" class="logSection">
+          <li class="logItem">
+            <a href=""
+              ><button id="loginBtn" class="logBtn btn_css">로그인</button></a
+            >
+          </li>
+        </ul>
+        <!-- afterLogin은 flex와 충돌나서 blind 클래스 add하고 logSection 클래스 remove 해줘야함-->
+        <ul id="afterLogin" class="blind">
+          <li class="logItem">
+            <a href=""
+              ><img src="img/alarm.svg" alt="alarm img" id="alarm_img"
+            /></a>
+          </li>
+          <li class="logItem">
+            <a href=""
+              ><button id="mypageBtn" class="btn_css">마이페이지</button></a
+            >
+          </li>
+          <li class="logItem">
+            <a href=""
+              ><button id="logoutBtn" class="logBtn btn_css">
+                로그아웃
+              </button></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- end header -->
+    <div id="bodyWrap">
+      <div id="contentWrap">
+        <aside class="act-detail-aside">
+          <div class="act-profile-img">
+            <img src="img/sample-img-01.png" alt="" />
+          </div>
+          <h1 class="act-deatil-aside-title">금요일은 소고기 먹는 날</h1>
+          <div class="act-summary-info">
+            <p>멤버 22명</p>
+            <p>리더 팡근</p>
+          </div>
+
+          <p class="act-summary">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            repellat soluta recusandae explicabo quo voluptate quasi? Rerum
+            repellat, beatae et consectetur quae assumenda qui itaque, ab enim
+            quaerat tempora reprehenderit!
+          </p>
+
+          <div class="tagSection">
+            <div class="loca_tag tag">
+              <img src="img/map.png" class="tag_img" />
+              <span class="location_name font_size_10">경안동</span>
+            </div>
+            <div class="cate_tag tag">
+              <span class="category_name font_size_10">자전거</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn-meet join">
+            <a href="#">모임 가입하기</a>
+          </button>
+
+          <!-- <button type="button" class="btn-meet wirte">
+            <a href="#">글 쓰기</a>
+          </button> -->
+
+          <a class="act-detail-link" href="#">모임 자세히 보기</a>
+        </aside>
+      </div>
+      <!-- end contentWrap -->
+    </div>
+    <!-- end bodyWrap -->
+  </body>
+</html>
