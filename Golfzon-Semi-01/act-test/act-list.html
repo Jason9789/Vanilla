@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/footer.css" />
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/select-list.js"></script>
   </head>
   <body>
     <div id="menuWrap">
@@ -82,8 +83,14 @@
 
             <section class="title titleRight">
               <button class="btn_createMeet"><a href="#">모임 생성</a></button>
-                <span id="icon-sort-act" class="sortIcon"><img src="./img/arrow-sort.svg" alt=""></span>
-                <span id="btn-sort-act" class="sortBtn">최신순</span>
+                <div class="select-sort-list ">
+                  <button class="label">최신순</button>
+                  <ul class="option-list">
+                    <li class="option-item">최신순</li>
+                    <li class="option-item">오래된순</li>
+                    <li class="option-item">인기순</li>
+                  </ul>
+                </div>
             </section>
           </div>
 

@@ -215,3 +215,85 @@
   height: 31px;
   margin-top: 8px;
 }
+
+/* ********************* */
+/** 글 정렬 select custom  */
+/* ********************* */
+.select-sort-list * {
+  box-sizing: border-box;
+}
+
+.select-sort-list {
+  position: relative;
+  width: 90px;
+  height: 24px;
+
+  border-radius: 4px;
+  border: none;
+
+  cursor: pointer;
+}
+
+.select-sort-list:after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  right: 24px;
+  /* background: lightcoral; */
+}
+
+.select-sort-list .label {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+
+  border: 0 none;
+  outline: 0 none;
+  padding-left: 10px;
+
+  background: transparent;
+  cursor: pointer;
+
+  background: url('../img/arrow-sort-16-filled.svg') calc(100% - 8px) center
+    no-repeat;
+}
+
+.select-sort-list .option-list {
+  position: absolute;
+  top: 28px;
+  left: 0px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  list-style-type: none;
+  padding: 0;
+
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.3s ease-in;
+}
+
+.select-sort-list.active .option-list {
+  max-height: 500px;
+}
+
+.select-sort-list .option-item {
+  border-bottom: 1px solid #e4e4e4;
+  padding: 5px 10px 5px;
+  transition: 0.1s;
+  font-size: 13px;
+}
+
+.select-sort-list .option-item:hover {
+  background-color: #e4e4e4;
+}
+
+.select-sort-list .option-item:last-child {
+  border-bottom: 0 none;
+}
