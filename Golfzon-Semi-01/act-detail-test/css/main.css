@@ -1,9 +1,9 @@
 #contentWrap {
   width: 1320px;
-  height: auto;
+  height: 100vh;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  /* flex-direction: column; */
   background-color: #f7f8fa;
   margin-top: 0px;
   padding-bottom: 30px;
@@ -40,4 +40,8 @@
   justify-content: right;
   align-items: center;
   width: 38%;
+}
+
+.feedWrap {
+  width: 800px;
 }

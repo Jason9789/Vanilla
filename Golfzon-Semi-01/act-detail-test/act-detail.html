@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/act-detail.css" />
+    <link rel="stylesheet" href="css/searchBar.css" />
   </head>
   <body>
     <div id="menuWrap">
@@ -86,6 +87,50 @@
           </button> -->
 
           <a class="act-detail-link" href="#">모임 자세히 보기</a>
+        </aside>
+
+        <section class="feedWrap">
+          <article>
+            <div id="searchWrap">
+              <div id="searchBar">
+                <select id="category">
+                  <option>모임</option>
+                  <option>액티비티</option>
+                </select>
+                <img src="img/line.svg" alt="line 이미지" class="line" />
+                <select id="detailCategory">
+                  <option>전체</option>
+                  <option>모임</option>
+                  <option>액티비티</option>
+                </select>
+                <img src="img/line.svg" alt="line 이미지" class="line" />
+                <img src="img/search.svg" alt="search 이미지" id="searchImg" />
+                <input
+                  type="text"
+                  id="searchWord"
+                  placeholder="모임/액티비티 검색"
+                />
+              </div>
+            </div>
+            <div class="meet-notification">
+              <div class="notification-title">
+                <h3>공지</h3>
+                <p>
+                  공지내용 공지내용 공지내용 공지내용 공지내용공지내용 공지내용
+                  공지내용 공지내용 공지내용공지내용 공지내용 공지내용 공지내용
+                  공지내용공지내용 공지내용 공지내용 공지내용 공지내용
+                </p>
+              </div>
+              <a href="#">더보기</a>
+            </div>
+
+            <div class="all-feed"></div>
+          </article>
+        </section>
+        <!-- TODO -->
+        <aside id="act-right-aside">
+          <div class="right-summary-list" id="event-summary-list"></div>
+          <div class="right-summary-list" id="vote-summary-list"></div>
         </aside>
       </div>
       <!-- end contentWrap -->

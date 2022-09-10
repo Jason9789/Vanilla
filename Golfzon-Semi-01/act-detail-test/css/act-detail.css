@@ -124,3 +124,80 @@
   margin-right: 4px;
   vertical-align: middle;
 }
+
+/* 공지 사항 */
+.meet-notification {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 54px;
+  background-color: #ffffff;
+  border-radius: 4px;
+
+  padding: 0 20px;
+}
+
+.notification-title {
+  display: flex;
+  align-items: center;
+}
+
+.notification-title h3::before {
+  content: '';
+  background: url('../img/notification.svg');
+  background-size: 16px 16px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.notification-title h3 {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.notification-title p {
+  width: 600px;
+
+  margin: 0 8px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meet-notification a {
+  flex-shrink: 0;
+}
+
+/* 오른쪽 aside */
+#act-right-aside {
+  display: flex;
+  flex-direction: column;
+
+  width: 250px;
+
+  margin: 40px 24px;
+}
+
+.right-summary-list {
+  height: 200px;
+  background-color: #3da5f5;
+
+  margin-bottom: 20px;
+}
+
+#event-summary-list {
+  height: 200px;
+  background-color: #3da5f5;
+}
+
+#vote-summary-list {
+  height: 200px;
+  background-color: #3da5f5;
+}
