@@ -90,6 +90,8 @@
   border: none;
   border-radius: 4px;
 
+  margin-bottom: 12px;
+
   background-color: #3da5f5;
 }
 
@@ -106,8 +108,6 @@
 }
 
 .act-detail-link {
-  margin-top: 20px;
-
   color: #7a7070;
   font-size: 12px;
 }
@@ -178,28 +178,76 @@
 }
 
 /* 오른쪽 aside */
-#act-right-aside {
+.act-right-aside {
   display: flex;
   flex-direction: column;
 
   width: 250px;
+  height: auto;
 
   margin: 40px 24px;
 }
 
 .right-summary-list {
   height: 200px;
-  background-color: #3da5f5;
+  /* background-color: #3da5f5; */
 
   margin-bottom: 20px;
 }
 
+.right-summary-list-top {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 36px;
+  padding: 6px 12px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.right-summary-list-top h1 {
+  font-size: 12px;
+}
+
+.right-summary-list-top p {
+  font-size: 16px;
+}
+
+.right-summary-list-contents {
+  box-sizing: border-box;
+
+  width: 100%;
+  height: auto;
+}
+
+.right-summary-list-contents div {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+
+  padding: 12px;
+}
+
+.right-summary-list-contents div:not(:last-of-type) {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.right-summary-list-contents p {
+  font-size: 10px;
+  font-weight: 400;
+  margin: 0;
+}
+
 #event-summary-list {
-  height: 200px;
-  background-color: #3da5f5;
+  height: 150px;
+  background-color: #ffffff;
+  border-radius: 4px;
 }
 
 #vote-summary-list {
-  height: 200px;
-  background-color: #3da5f5;
+  height: 150px;
+  background-color: #ffffff;
 }

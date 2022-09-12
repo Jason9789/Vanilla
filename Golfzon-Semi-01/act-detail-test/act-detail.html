@@ -20,7 +20,8 @@
         <a href=""><img src="img/logo.svg" alt="logo img" id="logo_img" /></a>
       </div>
       <div id="log_Section">
-        <ul id="beforeLogin" class="logSection">
+        <!-- <ul id="beforeLogin" class="logSection"> -->
+        <ul id="beforeLogin" class="blind">
           <li class="logItem">
             <a href=""
               ><button id="loginBtn" class="logBtn btn_css">로그인</button></a
@@ -28,7 +29,7 @@
           </li>
         </ul>
         <!-- afterLogin은 flex와 충돌나서 blind 클래스 add하고 logSection 클래스 remove 해줘야함-->
-        <ul id="afterLogin" class="blind">
+        <ul id="afterLogin" class="logSection">
           <li class="logItem">
             <a href=""
               ><img src="img/alarm.svg" alt="alarm img" id="alarm_img"
@@ -79,8 +80,18 @@
             </div>
           </div>
 
-          <button type="button" class="btn-meet join">
+          <!-- 로그인 전 -->
+          <!-- <button type="button" class="btn-meet join"> -->
+          <button type="button" class="blind">
             <a href="#">모임 가입하기</a>
+          </button>
+
+          <!-- 로그인 후 -->
+          <button type="button" class="btn-meet join">
+            <a href="">글쓰기</a>
+          </button>
+          <button type="button" class="btn-meet join">
+            <a href="">액티비티 개설</a>
           </button>
 
           <!-- <button type="button" class="btn-meet wirte">
@@ -152,118 +163,45 @@
                 </div>
               </div>
               <!-- end one feed -->
-
-              <div class="feed">
-                <div class="feed-profile">
-                  <div>
-                    <img src="./img/loopy.svg" alt="프로필 이미지" />
-                  </div>
-                  <p class="user-nickname">팡팡팡</p>
-                  <p class="write-date">2022.09.12</p>
-                </div>
-                <div class="feed-post">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Minima repellendus fugit perspiciatis neque nihil distinctio
-                    praesentium ex expedita est possimus provident facere
-                    deserunt perferendis, recusandae quidem et deleniti nobis
-                    laborum. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Corporis quam atque iure possimus, consequuntur ea
-                    hic. Nisi libero qui incidunt nihil dolores. Quam
-                    dignissimos nemo at temporibus numquam magnam quibusdam.
-                  </p>
-                </div>
-                <div class="feed-options">
-                  <p><a href="#">댓글</a></p>
-                </div>
-              </div>
-              <!-- end one feed -->
-
-              <div class="feed">
-                <div class="feed-profile">
-                  <div>
-                    <img src="./img/loopy.svg" alt="프로필 이미지" />
-                  </div>
-                  <p class="user-nickname">팡팡팡</p>
-                  <p class="write-date">2022.09.12</p>
-                </div>
-                <div class="feed-post">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Minima repellendus fugit perspiciatis neque nihil distinctio
-                    praesentium ex expedita est possimus provident facere
-                    deserunt perferendis, recusandae quidem et deleniti nobis
-                    laborum. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Corporis quam atque iure possimus, consequuntur ea
-                    hic. Nisi libero qui incidunt nihil dolores. Quam
-                    dignissimos nemo at temporibus numquam magnam quibusdam.
-                  </p>
-                </div>
-                <div class="feed-options">
-                  <p><a href="#">댓글</a></p>
-                </div>
-              </div>
-              <!-- end one feed -->
-
-              <div class="feed">
-                <div class="feed-profile">
-                  <div>
-                    <img src="./img/loopy.svg" alt="프로필 이미지" />
-                  </div>
-                  <p class="user-nickname">팡팡팡</p>
-                  <p class="write-date">2022.09.12</p>
-                </div>
-                <div class="feed-post">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Minima repellendus fugit perspiciatis neque nihil distinctio
-                    praesentium ex expedita est possimus provident facere
-                    deserunt perferendis, recusandae quidem et deleniti nobis
-                    laborum. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Corporis quam atque iure possimus, consequuntur ea
-                    hic. Nisi libero qui incidunt nihil dolores. Quam
-                    dignissimos nemo at temporibus numquam magnam quibusdam.
-                  </p>
-                </div>
-                <div class="feed-options">
-                  <p><a href="#">댓글</a></p>
-                </div>
-              </div>
-              <!-- end one feed -->
-
-              <div class="feed">
-                <div class="feed-profile">
-                  <div>
-                    <img src="./img/loopy.svg" alt="프로필 이미지" />
-                  </div>
-                  <p class="user-nickname">팡팡팡</p>
-                  <p class="write-date">2022.09.12</p>
-                </div>
-                <div class="feed-post">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Minima repellendus fugit perspiciatis neque nihil distinctio
-                    praesentium ex expedita est possimus provident facere
-                    deserunt perferendis, recusandae quidem et deleniti nobis
-                    laborum. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Corporis quam atque iure possimus, consequuntur ea
-                    hic. Nisi libero qui incidunt nihil dolores. Quam
-                    dignissimos nemo at temporibus numquam magnam quibusdam.
-                  </p>
-                </div>
-                <div class="feed-options">
-                  <p><a href="#">댓글</a></p>
-                </div>
-              </div>
-              <!-- end one feed -->
             </div>
             <!-- end all feed -->
           </article>
         </section>
         <!-- TODO -->
-        <aside id="act-right-aside">
-          <div class="right-summary-list" id="event-summary-list"></div>
-          <div class="right-summary-list" id="vote-summary-list"></div>
+        <aside class="act-right-aside">
+          <div class="right-summary-list" id="event-summary-list">
+            <div class="right-summary-list-top">
+              <h1>모임 내 액티비티</h1>
+              <p><a href="#">+</a></p>
+            </div>
+            <div class="right-summary-list-contents">
+              <div><p>액티비티 1</p></div>
+              <div><p>액티비티 2</p></div>
+              <div><p>액티비티 3</p></div>
+            </div>
+          </div>
+          <div class="right-summary-list" id="event-summary-list">
+            <div class="right-summary-list-top">
+              <h1>이벤트</h1>
+              <p><a href="#">+</a></p>
+            </div>
+            <div class="right-summary-list-contents">
+              <div><p>이벤트1</p></div>
+              <div><p>이벤트2</p></div>
+              <div><p>이벤트3</p></div>
+            </div>
+          </div>
+          <div class="right-summary-list" id="vote-summary-list">
+            <div class="right-summary-list-top">
+              <h1>투표</h1>
+              <p><a href="#">+</a></p>
+            </div>
+            <div class="right-summary-list-contents">
+              <div><p>투표 1</p></div>
+              <div><p>투표 2</p></div>
+              <div><p>투표 3</p></div>
+            </div>
+          </div>
         </aside>
       </div>
       <!-- end contentWrap -->
