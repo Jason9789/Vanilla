@@ -1,0 +1,78 @@
+.all-feed {
+  /* background-color: #3da5f5; */
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 24px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.feed-profile {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin: 24px;
+}
+
+.feed-profile img {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border-radius: 15px;
+  margin-right: 8px;
+}
+
+.user-nickname {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 8px;
+  text-align: center;
+}
+
+.write-date {
+  font-size: 12px;
+}
+
+.feed-post {
+  /* margin: 0; */
+  padding: 0 24px;
+
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.feed-post p {
+  box-sizing: border-box;
+
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  height: 3.6em;
+
+  margin: 0 0 24px;
+}
+
+.feed-options {
+  margin: 0 24px;
+}
+
+.feed-options a {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 700;
+}
