@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="css/act-detail.css" />
     <link rel="stylesheet" href="css/searchBar.css" />
     <link rel="stylesheet" href="css/feed.css" />
+    <link rel="stylesheet" href="css/post-writer.css" />
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/popup.js"></script>
   </head>
   <body>
     <div id="menuWrap">
@@ -87,9 +91,10 @@
           </button>
 
           <!-- 로그인 후 -->
-          <button type="button" class="btn-meet join">
-            <a href="">글쓰기</a>
+          <button type="button" class="btn-meet join" onclick="popupShow()">
+            글쓰기
           </button>
+          <!-- <input type="button" onclick="popupShow()" value="글쓰기" /> -->
           <button type="button" class="btn-meet join">
             <a href="">액티비티 개설</a>
           </button>
@@ -211,5 +216,30 @@
       <!-- end footer -->
     </div>
     <!-- end bodyWrap -->
+
+    <!-- ==================================== -->
+    <!-- 글쓰기 view 팝업 -->
+    <!-- ==================================== -->
+    <div class="popup-layer">
+      <div class="popup-box">
+        <div class="popup-top">
+          <h1>글쓰기</h1>
+        </div>
+        <div class="popup-writer">
+          <form action="" class="popup-writer">
+            <input type="text" placeholder="제목" />
+            <textarea
+              name="content"
+              id="content"
+              placeholder="내용을 입락하세요."
+            ></textarea>
+          </form>
+        </div>
+        <div class="popup-btn-group">
+          <button class="btn-cancel" onclick="popupHide()">취소</button>
+          <button class="btn-submit">게시</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
