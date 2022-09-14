@@ -195,6 +195,7 @@
   /* background-color: #3da5f5; */
 
   margin-bottom: 20px;
+  box-shadow: 0px 1px 1px gray;
 }
 
 .right-summary-list-top {
@@ -224,7 +225,8 @@
   box-sizing: border-box;
 
   width: 100%;
-  height: auto;
+  height: 110px;
+  overflow: auto;
 }
 
 .right-summary-list-contents div {
