@@ -33,6 +33,10 @@
   margin: 0;
 }
 
+.act-summary-info a {
+  color: #000000;
+}
+
 .act-summary-info p:first-child::after {
   content: '•';
 }

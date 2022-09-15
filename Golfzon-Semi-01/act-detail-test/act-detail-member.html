@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>모임 상세 페이지</title>
+    <title>모임 유저 리스트</title>
 
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
@@ -63,7 +63,7 @@
           </div>
           <h1 class="act-deatil-aside-title">금요일은 소고기 먹는 날</h1>
           <div class="act-summary-info">
-            <p><a href="./act-detail-member.html">멤버 22명</a></p>
+            <p><a href="#">멤버 22명</a></p>
             <p>리더 팡근</p>
           </div>
 
@@ -106,71 +106,45 @@
           <a class="act-detail-link" href="#">모임 자세히 보기</a>
         </aside>
 
-        <section class="feedWrap">
-          <article>
-            <div id="searchWrap">
-              <div id="searchBar">
-                <select id="category">
-                  <option>모임</option>
-                  <option>액티비티</option>
-                </select>
-                <img src="img/line.svg" alt="line 이미지" class="line" />
-                <select id="detailCategory">
-                  <option>전체</option>
-                  <option>모임</option>
-                  <option>액티비티</option>
-                </select>
-                <img src="img/line.svg" alt="line 이미지" class="line" />
-                <img src="img/search.svg" alt="search 이미지" id="searchImg" />
-                <input
-                  type="text"
-                  id="searchWord"
-                  placeholder="모임/액티비티 검색"
-                />
-              </div>
-            </div>
-            <div class="meet-notification">
-              <div class="notification-title">
-                <h3>공지</h3>
-                <p>
-                  공지내용 공지내용 공지내용 공지내용 공지내용공지내용 공지내용
-                  공지내용 공지내용 공지내용공지내용 공지내용 공지내용 공지내용
-                  공지내용공지내용 공지내용 공지내용 공지내용 공지내용
-                </p>
-              </div>
-              <a href="#">더보기</a>
-            </div>
-            <!-- end meet-notification -->
-
-            <div class="all-feed">
-              <div class="feed">
-                <div class="feed-profile">
+        <!-- 유저 리스트 부분 -->
+        <section class="feedWrap feed-member-list">
+          <div class="member-list-title">
+            <h1>멤버</h1>
+            <p id="all-member-count">10</p>
+          </div>
+          <div class="act-member-list">
+            <ul>
+              <li>
+                <div class="feed-profile member-list">
                   <div>
-                    <img src="./img/loopy.svg" alt="프로필 이미지" />
+                    <img src="./img/loopy.svg" alt="" />
                   </div>
                   <p class="user-nickname">팡팡팡</p>
-                  <p class="write-date">2022.09.12</p>
+                  <span class="act-user leader">리더</span>
+                  <p></p>
                 </div>
-                <div class="feed-post">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Minima repellendus fugit perspiciatis neque nihil distinctio
-                    praesentium ex expedita est possimus provident facere
-                    deserunt perferendis, recusandae quidem et deleniti nobis
-                    laborum. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Corporis quam atque iure possimus, consequuntur ea
-                    hic. Nisi libero qui incidunt nihil dolores. Quam
-                    dignissimos nemo at temporibus numquam magnam quibusdam.
-                  </p>
+              </li>
+              <li>
+                <div class="feed-profile member-list">
+                  <div>
+                    <img src="./img/loopy.svg" alt="" />
+                  </div>
+                  <p class="user-nickname">팡팡팡</p>
+                  <span class="act-user operator">운영자</span>
+                  <p></p>
                 </div>
-                <div class="feed-options">
-                  <p><a href="#">댓글</a></p>
+              </li>
+              <li>
+                <div class="feed-profile member-list">
+                  <div>
+                    <img src="./img/loopy.svg" alt="" />
+                  </div>
+                  <p class="user-nickname">팡팡팡</p>
+                  <span class="act-user"></span>
                 </div>
-              </div>
-              <!-- end one feed -->
-            </div>
-            <!-- end all feed -->
-          </article>
+              </li>
+            </ul>
+          </div>
         </section>
         <!-- TODO -->
         <aside class="act-right-aside">
