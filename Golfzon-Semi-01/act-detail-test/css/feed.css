@@ -65,6 +65,10 @@
   border-bottom: 1px solid #e4e4e4;
 }
 
+.feed-post a {
+  color: #000000;
+}
+
 .feed-post p {
   box-sizing: border-box;
 
