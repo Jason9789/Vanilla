@@ -21,6 +21,7 @@
   box-sizing: border-box;
   height: 50px;
   align-items: center;
+  justify-content: space-between;
   margin: 24px;
 }
 
@@ -116,6 +117,15 @@
 .member-list-title p {
   font-size: 24px;
   color: #48a0fa;
+}
+
+.feed-profile.member-list {
+  display: flex;
+  box-sizing: border-box;
+  height: 50px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 24px;
 }
 
 .act-user.leader {
