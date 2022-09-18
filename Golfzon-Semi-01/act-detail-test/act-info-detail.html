@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모임 정보 페이지</title>
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/act-detail.css" />
+    <link rel="stylesheet" href="css/searchBar.css" />
+    <link rel="stylesheet" href="css/feed.css" />
+    <link rel="stylesheet" href="css/post-writer.css" />
+    <link rel="stylesheet" href="css/act-info.css" />
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/popup.js"></script>
+  </head>
+  <body>
+    <div id="menuWrap">
+      <div id="logoSection">
+        <a href=""><img src="img/logo.svg" alt="logo img" id="logo_img" /></a>
+      </div>
+      <div id="log_Section">
+        <!-- <ul id="beforeLogin" class="logSection"> -->
+        <ul id="beforeLogin" class="blind">
+          <li class="logItem">
+            <a href=""
+              ><button id="loginBtn" class="logBtn btn_css">로그인</button></a
+            >
+          </li>
+        </ul>
+        <!-- afterLogin은 flex와 충돌나서 blind 클래스 add하고 logSection 클래스 remove 해줘야함-->
+        <ul id="afterLogin" class="logSection">
+          <li class="logItem">
+            <a href=""
+              ><img src="img/alarm.svg" alt="alarm img" id="alarm_img"
+            /></a>
+          </li>
+          <li class="logItem">
+            <a href="./mypage.html"
+              ><button id="mypageBtn" class="btn_css">마이페이지</button></a
+            >
+          </li>
+          <li class="logItem">
+            <a href=""
+              ><button id="logoutBtn" class="logBtn btn_css">
+                로그아웃
+              </button></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- end header -->
+    <div id="bodyWrap">
+      <div id="contentWrap">
+        <aside class="act-detail-aside">
+          <div class="act-profile-img">
+            <img src="img/sample-img-01.png" alt="" />
+          </div>
+          <h1 class="act-deatil-aside-title">금요일은 소고기 먹는 날</h1>
+          <div class="act-summary-info">
+            <p><a href="./act-detail-member.html">멤버 22명</a></p>
+            <p>리더 팡근</p>
+          </div>
+
+          <p class="act-summary">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            repellat soluta recusandae explicabo quo voluptate quasi? Rerum
+            repellat, beatae et consectetur quae assumenda qui itaque, ab enim
+            quaerat tempora reprehenderit!
+          </p>
+
+          <div class="tagSection">
+            <div class="loca_tag tag">
+              <img src="img/map.png" class="tag_img" />
+              <span class="location_name font_size_10">경안동</span>
+            </div>
+            <div class="cate_tag tag">
+              <span class="category_name font_size_10">자전거</span>
+            </div>
+          </div>
+
+          <!-- 로그인 전 -->
+          <!-- <button type="button" class="btn-meet join"> -->
+          <button type="button" class="blind">
+            <a href="#">모임 가입하기</a>
+          </button>
+
+          <!-- 로그인 후 -->
+          <button type="button" class="btn-meet join" onclick="popupShow()">
+            글쓰기
+          </button>
+          <!-- <input type="button" onclick="popupShow()" value="글쓰기" /> -->
+          <button type="button" class="btn-meet join">
+            <a href="">액티비티 개설</a>
+          </button>
+
+          <!-- <button type="button" class="btn-meet wirte">
+            <a href="#">글 쓰기</a>
+          </button> -->
+
+          <a class="act-detail-link" href="#">모임 자세히 보기</a>
+        </aside>
+        <section class="act-info-wrap">
+          <div class="act-info-top">
+            <h1 class="act-info-title">모임소개</h1>
+            <button class="btn-act-info-edit"></button>
+            <button class="btn-act-info-remove"></button>
+          </div>
+
+          <div class="act-info-tag">
+            <h3>모임 정보</h3>
+            <div class="tagSection">
+              <div class="loca_tag tag">
+                <img src="img/map.png" class="tag_img" />
+                <span class="location_name font_size_10">경안동</span>
+              </div>
+              <div class="cate_tag tag">
+                <span class="category_name font_size_10">자전거</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="act-info-content">
+            <pre>
+옛 말에 그런 말이 있죠
+"금요일은 소고기를 먹어라"
+- 맛있는 소고기와 와인을 먹어요
+- 즐거운 이야기를 나눠요
+- 지갑은 비우고 배는 가득 채우는 모임이에요🙌
+- 아 참! 사실 그런 예삼ㄹ은 없어요. 그냥 맛있게 먹어요!
+            </pre>
+          </div>
+
+          <div class="act-info-detail">
+            <h3>모임 정보</h3>
+            <div>
+              <p>모임 개설일</p>
+              <span>2022년 08월</span>
+            </div>
+            <div>
+              <p>멤버 수</p>
+              <span>22명</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- end contentWrap -->
+      <div id="footerWrap">
+        <h5>© Golfzon Tech Academy, Inc. All rights reserved.</h5>
+      </div>
+      <!-- end footer -->
+    </div>
+    <!-- end bodyWrap -->
+
+    <!-- ==================================== -->
+    <!-- 글쓰기 view 팝업 -->
+    <!-- ==================================== -->
+    <div class="popup-layer">
+      <div class="popup-box">
+        <div class="popup-top">
+          <h1>글쓰기</h1>
+        </div>
+        <div class="popup-writer">
+          <form action="" class="popup-writer">
+            <input type="text" placeholder="제목" />
+            <textarea
+              name="content"
+              id="content"
+              placeholder="내용을 입락하세요."
+            ></textarea>
+          </form>
+        </div>
+        <div class="popup-btn-group">
+          <button class="btn-cancel" onclick="popupHide()">취소</button>
+          <button class="btn-submit">게시</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
