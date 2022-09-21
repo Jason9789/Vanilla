@@ -17,15 +17,49 @@
   height: 100%;
 }
 
+.act-detail-aside-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .act-deatil-aside-title {
+  display: inline-block;
   font-size: 20px;
+  width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   margin-top: 20px;
   margin-bottom: 12px;
+}
+
+.heart-common {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-common img {
+  cursor: pointer;
+}
+
+.heart-common span {
+  display: inline;
+  font-size: 12px;
+}
+
+.img-heart-filled {
+  width: 24px;
+  height: 24px;
 }
 
 .act-summary-info {
   display: flex;
   padding: 0;
+  margin-bottom: 12px;
 }
 
 .act-summary-info p {
