@@ -1,24 +1,29 @@
-#contentWrap {
-  width: 1320px;
+.bodyWrap.mypage {
   height: auto;
+  min-height: 100%;
+}
+
+#contentWrap {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  background-color: #f7f8fa;
-  margin-top: 50px;
-  padding-bottom: 30px;
+
+  width: 1320px;
+  height: 100%;
+
+  padding-bottom: 50px;
 }
 
 .contentSection {
-  margin: 30px 50px;
+  margin: 0 200px;
   display: flex;
   flex-direction: column;
 }
 
 .sectionTitle {
-  font-size: 28px;
+  text-align: center;
+  font-size: 36px;
   height: 60px;
-  border-bottom: 2px solid #e4e4e4;
+  /* border-bottom: 2px solid #e4e4e4; */
 }
 
 /* =========================== */
@@ -26,10 +31,10 @@
 /* =========================== */
 #user-content {
   display: flex;
+  margin-bottom: 80px;
 }
 
 #user-profile-img {
-  /* position: relative; */
   width: 150px;
   height: 150px;
   overflow: hidden;
@@ -54,113 +59,23 @@
   font-size: 32px;
 }
 
-#btn-edit-user-info {
-  width: 150px;
-  height: 30px;
-  text-align: center;
-
-  margin-top: 8px;
-}
-
 /* =========================== */
-/*    my-meeting 부분 ID CSS    */
+/*    my-menu-list 부분 ID CSS  */
 /* =========================== */
-#meeting-guide {
+
+.my-menu-list {
+  margin: 30px 200px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-#meeting-guide p {
-  font-size: 32px;
-  font-weight: 700;
+.my-menu-list ul {
+  padding: 24px 0;
+  border-bottom: 1px solid #e4e4e4;
 }
 
-#meeting-guide a {
-  color: #ffffff;
-  background-color: #3da5f5;
-  padding: 8px 16px;
-  border-radius: 4px;
-}
-
-.content_list {
-  display: inline-block;
-  width: 420px;
-  height: 135px;
-  background-color: white;
-  border-radius: 15px;
-  margin: 10px 12px 15px 22px;
-  padding: 15px;
-  box-shadow: 0 3px 6px #e4e4e4, 0 3px 8px #e4e4e4;
-  cursor: pointer;
-}
-.content_title {
+.my-menu-list a {
+  color: #000000;
   font-size: 20px;
-  font-weight: bold;
-}
-.content_img {
-  width: auto;
-  height: auto;
-  /* border: 1px solid #E4E4E4; */
-  border-radius: 15px;
-}
-.list_img {
-  width: 70px;
-  height: 70px;
-}
-.content_description {
-  font-size: 13px;
-  padding-right: 10px;
-}
-.tagSection {
-  display: flex;
-  justify-content: left;
-}
-.tag {
-  display: flex;
-  height: auto;
-  border: 1px solid #cfd2cf;
-  border-radius: 3px;
-  margin-right: 5px;
-  padding: 3px;
-}
-.tag_img {
-  width: 12px;
-  height: 13px;
-}
-.font_size_10 {
-  font-size: 10px;
-}
-
-/* ********************* */
-.meet_info {
-  display: flex;
-  justify-content: left;
-  margin-top: 9px;
-  margin-left: 5px;
-}
-.meet_condition {
-  display: flex;
-  justify-content: center;
-  padding-top: 5px;
-  margin-left: 5px;
-}
-.divide {
-  padding-top: 2px;
-  width: 8px;
-  height: 15px;
-}
-.condition_bold {
-  margin-left: 6px;
-  margin-right: 8px;
-}
-.condition_common {
-  font-size: 12px;
-}
-.member_ment {
-  font-size: 11px;
-  font-weight: 900;
-}
-.member_cnt {
-  color: #006fd6;
+  font-weight: 700;
 }
