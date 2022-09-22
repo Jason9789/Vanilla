@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="css/feed.css" />
     <link rel="stylesheet" href="css/post-writer.css" />
 
-    <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/popup.js"></script>
+    <script src="js/select-list.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
   </head>
   <body>
     <div id="menuWrap">
@@ -69,6 +70,11 @@
               <img
                 class="img-heart-filled"
                 src="./img/heart-filled.svg"
+                alt=""
+              />
+              <img
+                class="img-heart-outlined blind"
+                src="./img/heart-outlined.svg"
                 alt=""
               />
               <span>9789</span>
@@ -139,13 +145,15 @@
             <div class="meet-notification">
               <div class="notification-title">
                 <h3>공지</h3>
-                <p>
-                  공지내용 공지내용 공지내용 공지내용 공지내용공지내용 공지내용
-                  공지내용 공지내용 공지내용공지내용 공지내용 공지내용 공지내용
-                  공지내용공지내용 공지내용 공지내용 공지내용 공지내용
-                </p>
+                <a href="./post-detail.html">
+                  <p>
+                    공지내용 공지내용 공지내용 공지내용 공지내용공지내용
+                    공지내용 공지내용 공지내용 공지내용공지내용 공지내용
+                    공지내용 공지내용 공지내용공지내용 공지내용 공지내용
+                    공지내용 공지내용
+                  </p>
+                </a>
               </div>
-              <a href="#">더보기</a>
             </div>
             <!-- end meet-notification -->
 
@@ -159,10 +167,14 @@
                     <p class="user-nickname">팡팡팡</p>
                     <p class="write-date">2022.09.12</p>
                   </div>
-                  <div class="post-more">
-                    <button type="button">
-                      <!-- <img src="./img/more.svg" alt="" /> -->
-                    </button>
+
+                  <div class="post-more-select">
+                    <img class="img-more" src="./img/more.svg" alt="" />
+
+                    <ul class="post-option-list">
+                      <li class="post-option-item">수정하기</li>
+                      <li class="post-option-item">삭제하기</li>
+                    </ul>
                   </div>
                 </div>
                 <div class="feed-post">
@@ -196,28 +208,49 @@
               <h1>모임 내 액티비티</h1>
               <p><a href="#">+</a></p>
             </div>
-            <div class="right-summary-list-contents">
-              <div><p>액티비티 1</p></div>
-              <div><p>액티비티 2</p></div>
-              <div><p>액티비티 3</p></div>
-              <div><p>액티비티 4</p></div>
-              <div><p>액티비티 5</p></div>
-              <div><p>액티비티 6</p></div>
-            </div>
+            <ul class="right-summary-list-contents">
+              <li>
+                <a href="">액티비티1</a>
+              </li>
+              <li>
+                <a href="">액티비티2</a>
+              </li>
+              <li>
+                <a href="">액티비티3</a>
+              </li>
+              <li>
+                <a href="">액티비티4</a>
+              </li>
+              <li>
+                <a href="">액티비티5</a>
+              </li>
+              <li>
+                <a href="">액티비티6</a>
+              </li>
+            </ul>
           </div>
           <div class="right-summary-list" id="vote-summary-list">
             <div class="right-summary-list-top">
               <h1>투표</h1>
               <p><a href="#">+</a></p>
             </div>
-            <div class="right-summary-list-contents">
-              <div><p>투표 1</p></div>
-              <div><p>투표 2</p></div>
-              <div><p>투표 3</p></div>
-              <div><p>투표 4</p></div>
-              <div><p>투표 5</p></div>
-              <div><p>투표 6</p></div>
-            </div>
+            <ul class="right-summary-list-contents">
+              <li>
+                <a href="">투표 1</a>
+              </li>
+              <li>
+                <a href="">투표 2</a>
+              </li>
+              <li>
+                <a href="">투표 3</a>
+              </li>
+              <li>
+                <a href="">투표 4</a>
+              </li>
+              <li>
+                <a href="">투표 5</a>
+              </li>
+            </ul>
           </div>
         </aside>
       </div>
