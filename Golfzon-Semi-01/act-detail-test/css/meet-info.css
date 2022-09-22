@@ -1,4 +1,4 @@
-.act-info-wrap {
+.meet-info-wrap {
   width: 820px;
   height: 100vh;
   background-color: #ffffff;
@@ -7,7 +7,7 @@
   margin-right: 160px;
 }
 
-.act-info-top {
+.meet-info-top {
   display: flex;
   align-items: center;
 
@@ -16,12 +16,12 @@
   border-bottom: 1px solid #e4e4e4;
 }
 
-.act-info-title {
+.meet-info-title {
   font-size: 24px;
   margin: 0 4px 0 0;
 }
 
-.btn-act-info-edit {
+.btn-meet-info-edit {
   width: 24px;
   height: 24px;
   background-size: 20px 20px;
@@ -32,7 +32,7 @@
   margin-right: 4px;
 }
 
-.btn-act-info-remove {
+.btn-meet-info-remove {
   width: 24px;
   height: 24px;
   background-size: 20px 20px;
@@ -41,17 +41,17 @@
   cursor: pointer;
 }
 
-.act-info-tag {
+.meet-info-tag {
   margin: 20px 32px;
   border-bottom: 1px solid #e4e4e4;
 }
 
-.act-info-content {
+.meet-info-content {
   margin: 20px 32px;
   border-bottom: 1px solid #e4e4e4;
 }
 
-.act-info-detail {
+.meet-info-detail {
   display: flex;
   flex-direction: column;
 
@@ -59,16 +59,16 @@
   border-bottom: 1px solid #e4e4e4;
 }
 
-.act-info-detail p::before {
+.meet-info-detail p::before {
   content: '•';
 }
 
-.act-info-detail p {
+.meet-info-detail p {
   display: inline-block;
   width: 15%;
 }
 
-.act-info-detail span {
+.meet-info-detail span {
   display: inline !important;
   font-weight: 700;
 }

@@ -1,4 +1,8 @@
-.act-detail-aside {
+/* ******************************* */
+/* meet left(detail) aside SECTION */
+/* ******************************* */
+
+.meet-detail-aside {
   display: flex;
   flex-direction: column;
 
@@ -8,16 +12,16 @@
   margin-left: 24px;
 }
 
-.act-profile-img {
+.meet-profile-img {
   height: 150px;
 }
 
-.act-profile-img img {
+.meet-profile-img img {
   width: 100%;
   height: 100%;
 }
 
-.act-detail-aside-top {
+.meet-detail-aside-top {
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -28,7 +32,7 @@
   margin-bottom: 12px;
 }
 
-.act-deatil-aside-title {
+.meet-deatil-aside-title {
   font-size: 20px;
   width: 85%;
   white-space: nowrap;
@@ -57,30 +61,30 @@
   height: 24px;
 }
 
-.act-summary-info {
+.meet-summary-info {
   display: flex;
   padding: 0;
   margin-bottom: 12px;
 }
 
-.act-summary-info p {
+.meet-summary-info p {
   font-size: 16px;
   margin: 0;
 }
 
-.act-summary-info a {
+.meet-summary-info a {
   color: #000000;
 }
 
-.act-summary-info p:first-child::after {
+.meet-summary-info p:first-child::after {
   content: '•';
 }
 
-.act-summary-info p:last-child::after {
+.meet-summary-info p:last-child::after {
   text-overflow: hidden;
 }
 
-.act-summary {
+.meet-summary {
   line-height: 1.2em;
 
   width: 100%;
@@ -148,12 +152,12 @@
   height: inherit;
 }
 
-.act-detail-link {
+.meet-detail-link {
   color: #7a7070;
   font-size: 12px;
 }
 
-.act-detail-link::before {
+.meet-detail-link::before {
   content: '';
   display: inline-block;
 
@@ -218,8 +222,11 @@
   flex-shrink: 0;
 }
 
-/* 오른쪽 aside */
-.act-right-aside {
+/* ****************** */
+/* meet detail right aside SECTION */
+/* ****************** */
+
+.meet-right-aside {
   display: flex;
   flex-direction: column;
 
