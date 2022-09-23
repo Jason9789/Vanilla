@@ -2,6 +2,17 @@
   width: 1320px;
   height: auto;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f7f8fa;
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+
+#contentWrapRow {
+  width: 1320px;
+  height: auto;
+  display: flex;
   justify-content: space-between;
   /* flex-direction: column; */
   background-color: #f7f8fa;
@@ -40,8 +51,4 @@
   justify-content: right;
   align-items: center;
   width: 38%;
-}
-
-.feedWrap {
-  width: 800px;
 }
