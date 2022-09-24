@@ -153,7 +153,9 @@
   font-weight: 700;
 }
 
+/* *********** */
 /* Member List */
+/* *********** */
 .feed-member-list {
   height: 100vh;
   overflow: scroll;
@@ -163,7 +165,7 @@
   display: flex;
   align-items: center;
 
-  margin-bottom: 24px;
+  margin-bottom: 6px;
   border-bottom: 1px solid #e4e4e4;
 }
 
@@ -180,13 +182,14 @@
 .feed-profile.member-list {
   display: flex;
   box-sizing: border-box;
-  height: 50px;
+
   align-items: center;
   justify-content: flex-start;
-  margin: 24px;
+
+  /* border-bottom: 1px solid #e4e4e4; */
 }
 
-.act-user.leader {
+.meet-user.leader {
   font-size: 8px;
   color: #ffffff;
   border-radius: 20px;
@@ -195,7 +198,7 @@
   background-color: #f86d7d;
 }
 
-.act-user.operator {
+.meet-user.operator {
   font-size: 8px;
   color: #ffffff;
   border-radius: 20px;
@@ -204,15 +207,18 @@
   background-color: #29ab45;
 }
 
-.act-member-list {
-  height: 150px;
+.meet-member-list {
+  height: auto;
 
   margin: 0 24px;
+}
+
+.meet-member-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #e4e4e4;
 }
 
 .member-list {
   width: 100%;
   margin: 0;
-
-  border-bottom: 1px solid #e4e4e4;
 }
