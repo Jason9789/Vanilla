@@ -20,6 +20,16 @@
   background-color: #ffffff;
 }
 
+.feed-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 24px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
 .feed-profile {
   display: flex;
   box-sizing: border-box;

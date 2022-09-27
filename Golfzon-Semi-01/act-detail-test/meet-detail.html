@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/post-delete.css" />
 
     <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/post-write-popup.js"></script>
     <script src="js/delete-popup.js"></script>
     <script src="js/select-list.js"></script>
   </head>
@@ -159,45 +160,9 @@
             <!-- end meet-notification -->
 
             <div class="all-feed">
-              <div class="feed">
-                <div class="feed-profile">
-                  <div class="user-info">
-                    <div>
-                      <img src="./img/loopy.svg" alt="프로필 이미지" />
-                    </div>
-                    <p class="user-nickname">팡팡팡</p>
-                    <p class="write-date">2022.09.12</p>
-                  </div>
-
-                  <div class="post-more-select">
-                    <img class="img-more" src="./img/more.svg" alt="" />
-
-                    <ul class="post-option-list">
-                      <li class="post-option-item">수정하기</li>
-                      <li class="post-option-item" data-popup-open="delete">
-                        삭제하기
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="feed-post">
-                  <a href="./post-detail.html">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Minima repellendus fugit perspiciatis neque nihil
-                      distinctio praesentium ex expedita est possimus provident
-                      facere deserunt perferendis, recusandae quidem et deleniti
-                      nobis laborum. Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Corporis quam atque iure possimus,
-                      consequuntur ea hic. Nisi libero qui incidunt nihil
-                      dolores. Quam dignissimos nemo at temporibus numquam
-                      magnam quibusdam.
-                    </p>
-                  </a>
-                </div>
-                <div class="feed-options">
-                  <p><a href="#">댓글</a></p>
-                </div>
+              <div class="feed-empty">
+                <h1>현재 모임에 작성된 글이 없어요!</h1>
+                <p>모임에 글을 작성해 소통해봐요!</p>
               </div>
               <!-- end one feed -->
             </div>
@@ -264,32 +229,32 @@
       <!-- end footer -->
     </div>
     <!-- end bodyWrap -->
+  </body>
 
-    <!-- ==================================== -->
-    <!-- 글쓰기 view 팝업 -->
-    <!-- ==================================== -->
-    <div class="popup-layer">
-      <div class="popup-box">
-        <div class="popup-top">
-          <h1>글쓰기</h1>
-        </div>
-        <div class="popup-writer">
-          <form action="" class="popup-writer">
-            <input type="text" placeholder="제목" />
-            <textarea
-              name="content"
-              id="content"
-              placeholder="내용을 입락하세요."
-            ></textarea>
-          </form>
-        </div>
-        <div class="popup-btn-group">
-          <button class="btn-cancel" onclick="popupHide()">취소</button>
-          <button class="btn-submit">게시</button>
-        </div>
+  <!-- ==================================== -->
+  <!-- 글쓰기 view 팝업 -->
+  <!-- ==================================== -->
+  <div class="popup-layer">
+    <div class="popup-box">
+      <div class="popup-top">
+        <h1>글쓰기</h1>
+      </div>
+      <div class="popup-writer">
+        <form action="" class="popup-writer">
+          <input type="text" placeholder="제목" />
+          <textarea
+            name="content"
+            id="content"
+            placeholder="내용을 입락하세요."
+          ></textarea>
+        </form>
+      </div>
+      <div class="popup-btn-group">
+        <button class="btn-cancel" onclick="popupHide()">취소</button>
+        <button class="btn-submit">게시</button>
       </div>
     </div>
-  </body>
+  </div>
 
   <!-- *******************  -->
   <!-- delete popup SECTION -->

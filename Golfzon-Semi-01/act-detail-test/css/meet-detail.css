@@ -148,6 +148,8 @@
   font-weight: 700;
 
   text-align: center;
+
+  cursor: pointer;
 }
 
 .btn-meet a {
