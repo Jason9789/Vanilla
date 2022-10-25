@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BackOffice Landing</title>
+
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+    <link rel="stylesheet" href="../css/landing/host-header.css" />
+    <link rel="stylesheet" href="../css/landing/host-landing.css" />
+
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/host_popup.js"></script>
+  </head>
+  <body style="display: flex; flex-direction: column">
+    <!-- ******************* -->
+    <!-- Host Header SECTION -->
+    <!-- ******************* -->
+    <section class="headerWrap">
+      <div class="logo-section">
+        <span>LOGO</span>
+      </div>
+
+      <div class="hostMenu-section">
+        <!-- 로그인 전 유저 메뉴 -->
+        <section id="before_login" class="">
+          <div id="before_hostMenu" class="hostMenu">
+            <img
+              src="../img/host-header/host_menu.svg"
+              alt="host_menu_img"
+              class="host_menu_img"
+            />
+            <img
+              src="../img/host-header/bx_host-circle.png"
+              alt="host_profile_img"
+              class="host_profile_img"
+            />
+          </div>
+
+          <!-- CUSTOM SELECT -->
+          <div class="custom-select-host blind">
+            <ul class="host-select-wrap">
+              <li id="go-login" class="host-select-list">로그인</li>
+              <li id="go-backOffice" class="host-select-list">공간등록신청</li>
+              <li id="go-user-home" class="host-select-list">Rence 이동</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 로그인 후 유저 메뉴 -->
+        <section id="after_login" class="blind">
+          <div id="after_hostMenu" class="hostMenu">
+            <img
+              src="../img/host-header/host_menu.svg"
+              alt="host_menu_img"
+              class="host_menu_img"
+            />
+            <img
+              src="../img/host-header/bx_host-circle.png"
+              alt="host_profile_img"
+              class="host_profile_img"
+            />
+          </div>
+
+          <!-- CUSTOM SELECT -->
+          <div class="custom-select-host blind">
+            <ul class="host-select-wrap">
+              <li id="go-myPage" class="host-select-list">마이페이지</li>
+              <li id="go-backOffice" class="host-select-list">공간등록신청</li>
+              <li id="go-logOut" class="host-select-list">로그아웃</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- ******************** -->
+    <!-- Host Landing SECTION -->
+    <!-- ******************** -->
+    <section class="landingWrap">
+      <div class="start-hosting">
+        <h1 class="title-start-hosting">나의 공간을 공개해 볼까요?</h1>
+        <button class="btn-start-hosting">
+          <a href="">호스팅 시작하기</a>
+        </button>
+      </div>
+
+      <div class="apply-hosting">
+        <h1 class="title-apply-hosting">
+          공간 공유 플랫폼, <br />Rence에서 시작하세요
+        </h1>
+        <button class="btn-apply-hosting">
+          <a href="">호스트 신청하기</a>
+        </button>
+      </div>
+    </section>
+
+    <!-- ******************* -->
+    <!-- Host Footer SECTION -->
+    <!-- ******************* -->
+    <section id="footerWrap">
+      <h5>© Golfzon Tech Academy, Inc. All rights reserved.</h5>
+    </section>
+  </body>
+</html>
