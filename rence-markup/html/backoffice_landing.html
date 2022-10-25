@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/footer.css" />
 
+    <link rel="stylesheet" href="../css/landing/host-login.css" />
+
     <link rel="stylesheet" href="../css/landing/host-header.css" />
     <link rel="stylesheet" href="../css/landing/host-landing.css" />
 
@@ -104,5 +106,76 @@
     <section id="footerWrap">
       <h5>© Golfzon Tech Academy, Inc. All rights reserved.</h5>
     </section>
+
+    <!-- LOGIN POPUP -->
+    <!-- START LOGIN SECTION -->
+    <div class="popup-background blind">
+      <div id="login-section" class="blind">
+        <section class="login-popup-logo-section">
+          <span>LOGO</span>
+        </section>
+        <section class="login-popup-input-section">
+          <input
+            type="text"
+            id="login-id"
+            class="login-popup-input"
+            placeholder="아이디를 입력하세요."
+          />
+          <input
+            type="password"
+            id="login-pw"
+            class="login-popup-input"
+            placeholder="비밀번호를 입력하세요."
+          />
+        </section>
+        <section class="login-popup-btn-section">
+          <input type="button" id="login-btn" value="로그인" />
+          <div class="txt-btn-wrap">
+            <span class="txt-btn">비밀번호 찾기</span>
+          </div>
+        </section>
+      </div>
+      <!-- END LOGIN SECTION -->
+
+      <!-- START FIND-PW SECTION -->
+      <div id="find-pw-section" class="find-section blind">
+        <section class="find-popup-logo-section">
+          <span>비밀번호 찾기</span>
+        </section>
+        <section class="find-popup-input-section">
+          <div class="email-wrap">
+            <span class="find-guide-txt"
+              >회원가입 시 입력한 이메일을 입력해주세요.</span
+            >
+            <input
+              type="email"
+              id="find-pw-email"
+              class="find-popup-input"
+              placeholder="이메일을 입력하세요."
+            />
+          </div>
+          <div>
+            <span class="find-guide-txt"
+              >회원가입 시 입력한 아이디를 입력해 주세요.</span
+            >
+            <input
+              type="text"
+              id="find-pw-id"
+              class="find-popup-input"
+              placeholder="비밀번호를 입력하세요."
+            />
+          </div>
+        </section>
+        <section class="find-popup-btn-section">
+          <input
+            type="button"
+            id="find-pw-btn"
+            class="find-btn"
+            value="비밀번호 찾기"
+          />
+        </section>
+      </div>
+      <!-- END FIND-PW SECTION -->
+    </div>
   </body>
 </html>
