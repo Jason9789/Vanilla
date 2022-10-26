@@ -1,0 +1,39 @@
+.custom-table {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.ct-header {
+  display: flex;
+  justify-content: space-around;
+
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.ct-header-cell {
+  font-weight: 700;
+  width: 25%;
+  text-align: center;
+}
+
+.ct-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.ct-body-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ct-body-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 10px;
+  width: 25%;
+}

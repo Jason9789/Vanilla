@@ -1,0 +1,109 @@
+#bodyWrap {
+  width: 100%;
+  height: 100vh;
+
+  background-color: #f6f4ff;
+}
+
+.contentWrap {
+  width: 100%;
+  height: 100vh;
+
+  padding: 60px;
+}
+
+.titleSection {
+  border-bottom: 1px solid #e4e4e4;
+
+  margin-bottom: 20px;
+}
+
+.titleSection h1 {
+  margin: 0 0 20px 0;
+}
+
+/* ********** */
+/* Board Wrap 공통 CSS */
+/* ********** */
+.boardWrap {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.card-title {
+  border-bottom: 1px solid #e4e4e4;
+
+  margin-bottom: 16px;
+}
+
+.cardSection {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 14px 20px;
+
+  border-radius: 15px;
+}
+
+/* ************************** */
+/* reserveSection 예약 관리 요약 */
+/* ************************** */
+.cardSection.reserve {
+  width: 66%;
+  height: 360px;
+}
+
+/* ************************** */
+/* commentSection 최신 문의 내역 */
+/* ************************** */
+
+.cardSection.comment {
+  width: 33%;
+  height: 360px;
+}
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+
+  height: 250px;
+  overflow: scroll;
+}
+
+.comment-list::-webkit-scrollbar {
+  display: none;
+}
+
+.comment-item {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.comment-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.comment-title p {
+  margin: 0;
+  font-size: 10px;
+}
+
+.comment-content {
+  width: 100%;
+  height: 40px;
+}
+
+.comment-content p {
+  margin: 0;
+  overflow: hidden;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

@@ -5,18 +5,240 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
     <link rel="stylesheet" href="../../css/DashBoard/left-aside.css" />
+    <link rel="stylesheet" href="../../css/DashBoard/custom-table.css" />
+
+    <link rel="stylesheet" href="../../css/DashBoard/board-home.css" />
   </head>
-  <body>
-    <section>
+  <body id="bodyWrap">
+    <!-- START aside-menu -->
+    <aside class="asideWrap">
       <div class="logo-section">
-        <span>LOGO</span>
+        <img src="../../img/RENCE-Host.svg" alt="logo" />
       </div>
 
-      <ul>
-        <li>대시보드</li>
-      </ul>
+      <!-- START menuWrap -->
+      <div class="menuWrap">
+        <div class="menu-item active">
+          <img src="../../img/dashBoard/ico-host-board.svg" alt="Dash Board" />
+          <p>대시보드</p>
+        </div>
+        <div class="menu-item">
+          <img src="../../img/dashBoard/ico-host-room.svg" alt="room" />
+          <p>공간관리</p>
+        </div>
+        <div class="menu-item">
+          <img src="../../img/dashBoard/ico-host-time.svg" alt="time" />
+          <p>예약 관리</p>
+        </div>
+        <div class="menu-item">
+          <img src="../../img/dashBoard/ico-host-reciept.svg" alt="Reciept" />
+          <p>정산</p>
+        </div>
+        <div class="menu-item">
+          <img src="../../img/dashBoard/ico-host-settings.svg" alt="Settings" />
+          <p>환경설정</p>
+        </div>
+      </div>
+      <!-- END menuWrap -->
+    </aside>
+    <!-- END aside-menu -->
+
+    <section class="contentWrap">
+      <div class="titleSection">
+        <h1>대시보드</h1>
+      </div>
+
+      <div class="boardWrap">
+        <div class="cardSection reserve">
+          <div class="card-title">
+            <h3>예약 관리 요약</h3>
+          </div>
+          <div class="custom-table">
+            <div class="ct-header">
+              <div class="ct-header-cell">예약 날짜</div>
+              <div class="ct-header-cell">예약 공간</div>
+              <div class="ct-header-cell">예약자</div>
+              <div class="ct-header-cell">결제 금액</div>
+              <div class="ct-header-cell">취소 여부</div>
+            </div>
+            <!-- END ct-header -->
+
+            <div class="ct-body">
+              <div class="ct-body-row">
+                <div class="ct-body-cell">
+                  <p>2022-10-23 10:00 ~ <br />2022-10-23 14:00</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>101호 1인 데스크</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>전판근</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>40,000</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>예약 중</p>
+                </div>
+              </div>
+              <!-- END ct-body-row -->
+              <div class="ct-body-row">
+                <div class="ct-body-cell">
+                  <p>2022-10-23 10:00 ~ <br />2022-10-23 14:00</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>101호 1인 데스크</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>전판근</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>40,000</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>예약 중</p>
+                </div>
+              </div>
+              <!-- END ct-body-row -->
+              <div class="ct-body-row">
+                <div class="ct-body-cell">
+                  <p>2022-10-23 10:00 ~ <br />2022-10-23 14:00</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>101호 1인 데스크</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>전판근</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>40,000</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>예약 중</p>
+                </div>
+              </div>
+              <!-- END ct-body-row -->
+              <div class="ct-body-row">
+                <div class="ct-body-cell">
+                  <p>2022-10-23 10:00 ~ <br />2022-10-23 14:00</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>101호 1인 데스크</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>전판근</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>40,000</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>예약 중</p>
+                </div>
+              </div>
+              <!-- END ct-body-row -->
+              <div class="ct-body-row">
+                <div class="ct-body-cell">
+                  <p>2022-10-23 10:00 ~ <br />2022-10-23 14:00</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>101호 1인 데스크</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>전판근</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>40,000</p>
+                </div>
+                <div class="ct-body-cell">
+                  <p>예약 중</p>
+                </div>
+              </div>
+              <!-- END ct-body-row -->
+            </div>
+            <!-- END ct-body -->
+          </div>
+          <!-- END custom table -->
+        </div>
+
+        <div class="cardSection comment">
+          <div class="card-title">
+            <h3>최신 문의 내역</h3>
+          </div>
+          <div class="comment-list">
+            <div class="comment-item">
+              <div class="comment-title">
+                <p>101호 개인 데스크</p>
+                <p>2022.10.24</p>
+              </div>
+              <!-- END comment-title -->
+              <div class="comment-content">
+                <p>
+                  나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희
+                </p>
+              </div>
+            </div>
+            <!-- END comment-item -->
+            <div class="comment-item">
+              <div class="comment-title">
+                <p>101호 개인 데스크</p>
+                <p>2022.10.24</p>
+              </div>
+              <!-- END comment-title -->
+              <div class="comment-content">
+                <p>
+                  나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희
+                </p>
+              </div>
+            </div>
+            <!-- END comment-item -->
+            <div class="comment-item">
+              <div class="comment-title">
+                <p>101호 개인 데스크</p>
+                <p>2022.10.24</p>
+              </div>
+              <!-- END comment-title -->
+              <div class="comment-content">
+                <p>
+                  나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희
+                </p>
+              </div>
+            </div>
+            <!-- END comment-item -->
+            <div class="comment-item">
+              <div class="comment-title">
+                <p>101호 개인 데스크</p>
+                <p>2022.10.24</p>
+              </div>
+              <!-- END comment-title -->
+              <div class="comment-content">
+                <p>
+                  나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나, 문희 나,
+                  문희
+                </p>
+              </div>
+            </div>
+            <!-- END comment-item -->
+          </div>
+          <!-- END comment-list -->
+        </div>
+      </div>
     </section>
   </body>
 </html>
