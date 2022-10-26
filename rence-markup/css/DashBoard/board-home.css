@@ -29,6 +29,8 @@
   display: flex;
 
   justify-content: space-between;
+
+  margin-bottom: 8px;
 }
 
 .card-title {
@@ -106,4 +108,78 @@
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+/* *********** */
+/* 일일 정산 요약 */
+/* *********** */
+.cardSection.sales {
+  width: 49.5%;
+  height: 200px;
+}
+
+.cardSection.room {
+  width: 49.5%;
+  height: 200px;
+}
+
+.sales-list {
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+
+  justify-content: space-between;
+}
+
+.sales-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sales-item p {
+  margin: 0;
+}
+
+.sales-item span {
+  font-weight: 700;
+}
+
+.sales-item span::after {
+  content: ' 원';
+  font-weight: 400;
+}
+
+/* ******* */
+/* 공간 요약 */
+/* ******* */
+.summary-list {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+  height: 90px;
+}
+
+.summary-list-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-list-item {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
+
+.summary-list-item p {
+  margin: 0;
+}
+
+.reserve-count::after {
+  content: ' 건';
+}
+
+.qna-count::after,
+.review-count::after {
+  content: ' 개';
 }
