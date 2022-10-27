@@ -52,6 +52,26 @@
   cursor: pointer;
 }
 
+.ct-body-btn.reserve-cancel {
+  background-color: #c4c4c4;
+  cursor: default;
+}
+
+.ct-body-btn.reserve-end {
+  background-color: #ff5c71;
+  cursor: default;
+}
+
+.ct-body-btn.reserve-ing {
+  background-color: #b2a4ff;
+  cursor: default;
+}
+
+.ct-body-btn.reserve-doing {
+  background-color: #2ee49d;
+  cursor: default;
+}
+
 .ct-body-btn.review-edit {
   background-color: #b2a4ff;
 }
@@ -88,7 +108,8 @@
 /* ********************************* */
 /* Custom Table for Host Review Page */
 /* ********************************* */
-.ct-body-row.review {
+.ct-body-row.review,
+.ct-body-row.reserve {
   margin-bottom: 4px;
   border-bottom: 1px solid #e4e4e4;
 }

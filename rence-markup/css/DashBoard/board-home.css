@@ -72,7 +72,8 @@
 }
 
 .boardWrap.review,
-.boardWrap.qna {
+.boardWrap.qna,
+.boardWrap.reserve {
   box-sizing: border-box;
   background-color: #ffffff;
 
@@ -82,6 +83,10 @@
   padding: 20px;
 
   border-radius: 15px;
+}
+
+.boardWrap.reserve {
+  flex-direction: column;
 }
 
 .card-title {
@@ -237,6 +242,10 @@
 
 .summary-list-item p {
   margin: 0;
+}
+
+.reserve-price::after {
+  content: ' 원';
 }
 
 .reserve-count::after {

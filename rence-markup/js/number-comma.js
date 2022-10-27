@@ -17,6 +17,12 @@ $(function () {
       .replace(/\B(?=(\d{3})+(?!\d))/g, ','),
   )
 
+  $('.reserve-price').text(
+    $('.reserve-price')
+      .text()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ','),
+  )
+
   $('.reserve-count').text(
     $('.reserve-count')
       .text()
