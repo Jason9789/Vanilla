@@ -59,6 +59,31 @@
   background-color: #2ee49d;
 }
 
+/* ********** */
+/* pagination */
+/* ********** */
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 24px;
+}
+.page-item button {
+  width: 20px;
+  height: 20px;
+
+  padding: 0;
+  margin: 0;
+  border: 1px solid #e4e4e4;
+
+  background-color: #ffffff;
+}
+
+.page-item img {
+  width: 16px;
+  height: 16px;
+}
+
 /* ********************************* */
 /* Custom Table for Host Review Page */
 /* ********************************* */
