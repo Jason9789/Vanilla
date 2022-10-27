@@ -31,7 +31,6 @@ $(function () {
   })
 
   $('#edit-room-type-label').on('click', function () {
-    console.log('zzzz')
     $('.edit-type-select-list').toggleClass('blind')
   })
 
@@ -45,9 +44,19 @@ $(function () {
 
   $('.edit-type-select-item').on('click', function () {
     let type = $(this).text()
-    console.log(type)
     $('#edit-room-type-label').text(type)
     $('#edit-room-type-label').css('color', '#000000')
     $('.edit-type-select-list').addClass('blind')
+  })
+
+  // 리뷰 답글 작성
+  $('.review-add').on('click', function () {
+    $('#comment-section').removeClass('blind')
+    $('.popup-background').removeClass('blind')
+  })
+
+  $('.btn-comment-cancel').on('click', function () {
+    $('#comment-section').addClass('blind')
+    $('.popup-background').addClass('blind')
   })
 })
