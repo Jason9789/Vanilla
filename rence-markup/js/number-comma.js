@@ -17,11 +17,20 @@ $(function () {
       .replace(/\B(?=(\d{3})+(?!\d))/g, ','),
   )
 
-  $('.reserve-price').text(
-    $('.reserve-price')
-      .text()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ','),
-  )
+  // $('.reserve-price').text().toLocaleString('ko-KR')
+  // $('.reserve-price').text(
+  //   $('.reserve-price')
+  //     .text()
+  //     .replaceWiths(/\B(?=(\d{3})+(?!\d))/g, ','),
+  // )
+
+  let prices = []
+
+  $('.reserve-price').each(function (index, value) {
+    let price = $(value).text()
+
+    $(this).text(price.replace(/\B(?=(\d{3})+(?!\d))/g, ','))
+  })
 
   $('.reserve-count').text(
     $('.reserve-count')
