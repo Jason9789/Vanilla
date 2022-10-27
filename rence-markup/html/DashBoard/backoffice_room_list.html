@@ -128,6 +128,7 @@
     <!-- popup background -->
     <!-- **************** -->
     <div class="popup-background blind">
+      <!-- 공간 추가 팝업 Section -->
       <div id="room-insert-section" class="blind">
         <section class="room-popup-title-section">
           <span>공간 추가</span>
@@ -165,10 +166,12 @@
           <button id="btn-insert-cancel" class="select-btn">닫기</button>
           <button id="btn-insert" class="select-btn">추가</button>
         </div>
+        <!-- END select-btn-group -->
       </div>
-      <!-- END select-btn-group -->
+      <!-- END room-insert-section -->
 
-      <div id="room-edit-section" class="blind">
+      <!-- 공간 수정 팝업 Section -->
+      <div id="room-edit-section" class="">
         <section class="room-popup-title-section">
           <span>공간 변경</span>
         </section>
@@ -206,8 +209,21 @@
           <button id="btn-edit-cancel" class="select-btn">닫기</button>
           <button id="btn-edit" class="select-btn">변경</button>
         </div>
+        <!-- END select-btn-group -->
       </div>
-      <!-- END select-btn-group -->
+      <!-- END room-edit-section -->
+
+      <!-- START DELETE CONFIRM POPUP -->
+      <div id="delete-popup" class="confirm-popup">
+        <section class="confirm-txt-section">
+          <span class="delete-txt"> 해당 공간을 정말 삭제하시겠습니까? </span>
+        </section>
+        <section class="confirm-btn-section">
+          <div id="delete-closeBtn" class="delete-noBtn">닫기</div>
+          <div class="confirm-yesBtn">삭제</div>
+        </section>
+      </div>
+      <!-- END DELETE FONFIRM POPUP -->
     </div>
     <!-- END popup-background blind -->
   </body>

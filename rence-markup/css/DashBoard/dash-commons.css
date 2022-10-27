@@ -168,11 +168,9 @@
   border-radius: 0 0 0 8px;
 }
 
-#btn-insert,
-#btn-edit {
-  background-color: #b2a4ff;
-  color: #ffffff;
-  font-weight: 700;
-
-  border-radius: 0 0 8px 0;
+#delete-popup {
+  height: 150px;
+}
+.delete-txt {
+  font-size: 16px;
 }
