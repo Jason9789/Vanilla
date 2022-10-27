@@ -159,6 +159,15 @@
   cursor: pointer;
 }
 
+#btn-insert,
+#btn-edit {
+  background-color: #b2a4ff;
+  color: #ffffff;
+  font-weight: 700;
+
+  border-radius: 0 0 8px 0;
+}
+
 #btn-insert-cancel,
 #btn-edit-cancel {
   background-color: #c4c4c4;

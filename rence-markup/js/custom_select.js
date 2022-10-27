@@ -1,3 +1,5 @@
+// Host Popup
+
 $(function () {
   $('#btn-room-add').click(function () {
     $('#room-insert-section').removeClass('blind')
@@ -14,13 +16,13 @@ $(function () {
     $('.popup-background').addClass('blind')
   })
 
-  $('#btn-edit-cancel').click(function () {
-    $('#room-insert-section').addClass('blind')
-    $('.popup-background').addClass('blind')
-  })
-
   $('.btn-room-edit').on('click', function () {
     $('#room-edit-section').removeClass('blind')
+    $('.popup-background').removeClass('blind')
+  })
+
+  $('.btn-room-delete').on('click', function () {
+    $('#delete-popup').removeClass('blind')
     $('.popup-background').removeClass('blind')
   })
 
