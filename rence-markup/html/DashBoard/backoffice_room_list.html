@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/DashBoard/left-aside.css" />
+    <link rel="stylesheet" href="../../css/DashBoard/my-room-list.css" />
+
+    <link rel="stylesheet" href="../../css/DashBoard/board-home.css" />
+
+    <script src="../../js/jquery-3.6.1.min.js"></script>
+    <script src="../../js/number-comma.js"></script>
+  </head>
+  <body id="bodyWrap">
+    <!-- START aside-menu -->
+    <aside class="asideWrap">
+      <div class="logo-section">
+        <img src="../../img/RENCE-Host.svg" alt="logo" />
+      </div>
+
+      <!-- START menuWrap -->
+      <div class="menuWrap">
+        <div class="menu-item active">
+          <img src="../../img/dashBoard/ico-host-board.svg" alt="Dash Board" />
+          <p>대시보드</p>
+        </div>
+        <div class="menu-item">
+          <img src="../../img/dashBoard/ico-host-room.svg" alt="room" />
+          <p>공간관리</p>
+        </div>
+        <div class="menu-item">
+          <img src="../../img/dashBoard/ico-host-time.svg" alt="time" />
+          <p>예약 관리</p>
+        </div>
+        <div class="menu-item">
+          <img src="../../img/dashBoard/ico-host-reciept.svg" alt="Reciept" />
+          <p>정산</p>
+        </div>
+        <div class="menu-item">
+          <img src="../../img/dashBoard/ico-host-settings.svg" alt="Settings" />
+          <p>환경설정</p>
+        </div>
+      </div>
+      <!-- END menuWrap -->
+    </aside>
+    <!-- END aside-menu -->
+
+    <section class="board-contentWrap">
+      <div class="titleSection">
+        <h1>공간 관리</h1>
+        <button id="btn-room-add" class="btn-room-add">추가</button>
+        <ul class="mini-nav">
+          <li><p class="nav-item active" id="room-list">리스트</p></li>
+          <li><p class="nav-item" id="qna-list">문의</p></li>
+          <li><p class="nav-item" id="review-list">후기</p></li>
+        </ul>
+        <!-- END mini-nav -->
+      </div>
+      <!-- END titleSection -->
+
+      <div class="boardWrap">
+        <div class="room-list">
+          <div class="room-item">
+            <div class="item-header">
+              <p>101호 1인 데스크</p>
+              <div class="item-buttons">
+                <button id="btn-room-edit">수정</button>
+                <button id="btn-room-delete">삭제</button>
+              </div>
+              <!-- END item-buttons -->
+            </div>
+            <!-- END item-header -->
+            <div class="item-body">
+              <p id="room-type">데스크</p>
+              <span id="room-price">10000</span>
+            </div>
+            <!-- END item-body -->
+          </div>
+          <!-- END room-item -->
+          <div class="room-item">
+            <div class="item-header">
+              <p>101호 1인 데스크</p>
+              <div class="item-buttons">
+                <button id="btn-room-edit">수정</button>
+                <button id="btn-room-delete">삭제</button>
+              </div>
+              <!-- END item-buttons -->
+            </div>
+            <!-- END item-header -->
+            <div class="item-body">
+              <p id="room-type">데스크</p>
+              <span id="room-price">10000</span>
+            </div>
+            <!-- END item-body -->
+          </div>
+          <!-- END room-item -->
+          <div class="room-item">
+            <div class="item-header">
+              <p>101호 1인 데스크</p>
+              <div class="item-buttons">
+                <button id="btn-room-edit">수정</button>
+                <button id="btn-room-delete">삭제</button>
+              </div>
+              <!-- END item-buttons -->
+            </div>
+            <!-- END item-header -->
+            <div class="item-body">
+              <p id="room-type">데스크</p>
+              <span id="room-price">10000</span>
+            </div>
+            <!-- END item-body -->
+          </div>
+          <!-- END room-item -->
+        </div>
+        <!-- END room-list -->
+      </div>
+      <!-- END boardWrap -->
+    </section>
+    <!-- END board-contentWrap -->
+  </body>
+</html>

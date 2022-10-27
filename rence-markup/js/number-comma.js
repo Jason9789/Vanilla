@@ -34,4 +34,10 @@ $(function () {
       .text()
       .replace(/\B(?=(\d{3})+(?!\d))/g, ','),
   )
+
+  $('#room-price').text(
+    $('#room-price')
+      .text()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ','),
+  )
 })
