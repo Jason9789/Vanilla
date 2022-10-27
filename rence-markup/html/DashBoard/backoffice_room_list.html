@@ -70,8 +70,8 @@
             <div class="item-header">
               <p>101호 1인 데스크</p>
               <div class="item-buttons">
-                <button id="btn-room-edit">수정</button>
-                <button id="btn-room-delete">삭제</button>
+                <button class="btn-room-edit">수정</button>
+                <button class="btn-room-delete">삭제</button>
               </div>
               <!-- END item-buttons -->
             </div>
@@ -87,8 +87,8 @@
             <div class="item-header">
               <p>101호 1인 데스크</p>
               <div class="item-buttons">
-                <button id="btn-room-edit">수정</button>
-                <button id="btn-room-delete">삭제</button>
+                <button class="btn-room-edit">수정</button>
+                <button class="btn-room-delete">삭제</button>
               </div>
               <!-- END item-buttons -->
             </div>
@@ -104,8 +104,8 @@
             <div class="item-header">
               <p>101호 1인 데스크</p>
               <div class="item-buttons">
-                <button id="btn-room-edit">수정</button>
-                <button id="btn-room-delete">삭제</button>
+                <button class="btn-room-edit">수정</button>
+                <button class="btn-room-delete">삭제</button>
               </div>
               <!-- END item-buttons -->
             </div>
@@ -124,7 +124,9 @@
     </section>
     <!-- END board-contentWrap -->
 
+    <!-- **************** -->
     <!-- popup background -->
+    <!-- **************** -->
     <div class="popup-background blind">
       <div id="room-insert-section" class="blind">
         <section class="room-popup-title-section">
@@ -143,15 +145,15 @@
           <div class="room-type-wrap">
             <p>공간 타입</p>
             <div class="room-type-select" id="room-type-select">
-              <button id="room-type-label" class="room-type-label">
+              <button id="insert-room-type-label" class="room-type-label">
                 타입을 선택해 주세요
               </button>
-              <ul class="type-select-list blind">
-                <li class="type-select-item">데스크</li>
-                <li class="type-select-item">4인 회의실</li>
-                <li class="type-select-item">6인 회의실</li>
-                <li class="type-select-item">10인 회의실</li>
-                <li class="type-select-item">오피스</li>
+              <ul class="insert-type-select-list blind">
+                <li class="insert-type-select-item">데스크</li>
+                <li class="insert-type-select-item">4인 회의실</li>
+                <li class="insert-type-select-item">6인 회의실</li>
+                <li class="insert-type-select-item">10인 회의실</li>
+                <li class="insert-type-select-item">오피스</li>
               </ul>
             </div>
             <!-- END room-type-select -->
@@ -160,8 +162,49 @@
         </section>
         <!-- room-popup-input-section -->
         <div class="select-btn-group">
-          <button id="btn-cancel" class="select-btn">닫기</button>
+          <button id="btn-insert-cancel" class="select-btn">닫기</button>
           <button id="btn-insert" class="select-btn">추가</button>
+        </div>
+      </div>
+      <!-- END select-btn-group -->
+
+      <div id="room-edit-section" class="blind">
+        <section class="room-popup-title-section">
+          <span>공간 변경</span>
+        </section>
+        <section class="room-popup-input-section">
+          <div class="room-name-wrap">
+            <p>공간 이름</p>
+            <input
+              type="text"
+              id="input-room-name"
+              class="input-room-name"
+              placeholder="공간 이름을 입력해 주세요"
+              value=""
+            />
+          </div>
+          <div class="room-type-wrap">
+            <p>공간 타입</p>
+            <div class="room-type-select" id="room-type-select">
+              <button id="edit-room-type-label" class="edit-room-type-label">
+                타입을 선택해 주세요
+              </button>
+              <ul class="edit-type-select-list blind">
+                <li class="edit-type-select-item">데스크</li>
+                <li class="edit-type-select-item">4인 회의실</li>
+                <li class="edit-type-select-item">6인 회의실</li>
+                <li class="edit-type-select-item">10인 회의실</li>
+                <li class="edit-type-select-item">오피스</li>
+              </ul>
+            </div>
+            <!-- END room-type-select -->
+          </div>
+          <!-- END room-type-wrap -->
+        </section>
+        <!-- room-popup-input-section -->
+        <div class="select-btn-group">
+          <button id="btn-edit-cancel" class="select-btn">닫기</button>
+          <button id="btn-edit" class="select-btn">변경</button>
         </div>
       </div>
       <!-- END select-btn-group -->
