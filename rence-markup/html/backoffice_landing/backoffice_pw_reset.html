@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/footer.css" />
+
+    <link rel="stylesheet" href="../../css/landing/host-login.css" />
+
+    <link rel="stylesheet" href="../../css/landing/host-header.css" />
+    <link rel="stylesheet" href="../../css/landing/host-landing.css" />
+
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/header.js"></script>
+
+    <title>비밀번호 재설정</title>
+  </head>
+  <body style="display: flex; flex-direction: column">
+    <!-- ******************* -->
+    <!-- Host Header SECTION -->
+    <!-- ******************* -->
+    <section class="headerWrap">
+      <div class="logo-section">
+        <span>LOGO</span>
+      </div>
+
+      <div class="hostMenu-section">
+        <!-- 로그인 전 유저 메뉴 -->
+        <section id="before_login" class="">
+          <div id="before_hostMenu" class="hostMenu">
+            <img
+              src="../../img/host-header/host_menu.svg"
+              alt="host_menu_img"
+              class="host_menu_img"
+            />
+            <img
+              src="../../img/host-header/bx_host-circle.png"
+              alt="host_profile_img"
+              class="host_profile_img"
+            />
+          </div>
+
+          <!-- CUSTOM SELECT -->
+          <div class="custom-select-host blind">
+            <ul class="host-select-wrap">
+              <li id="go-login" class="host-select-list">로그인</li>
+              <li id="go-backOffice" class="host-select-list">공간등록신청</li>
+              <li id="go-user-home" class="host-select-list">Rence 이동</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 로그인 후 유저 메뉴 -->
+        <section id="after_login" class="blind">
+          <div id="after_hostMenu" class="hostMenu">
+            <img
+              src="../../img/host-header/host_menu.svg"
+              alt="host_menu_img"
+              class="host_menu_img"
+            />
+            <img
+              src="../../img/host-header/bx_host-circle.png"
+              alt="host_profile_img"
+              class="host_profile_img"
+            />
+          </div>
+
+          <!-- CUSTOM SELECT -->
+          <div class="custom-select-host blind">
+            <ul class="host-select-wrap">
+              <li id="go-myPage" class="host-select-list">마이페이지</li>
+              <li id="go-backOffice" class="host-select-list">공간등록신청</li>
+              <li id="go-logOut" class="host-select-list">로그아웃</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- ******************** -->
+    <!-- Host Landing SECTION -->
+    <!-- ******************** -->
+
+    <!-- popup background -->
+    <div class="reset-pw-background">
+      <div id="popup-update-pw" class="">
+        <div class="titleSection">
+          <h3>새로운 비밀번호를 입력해 주세요</h3>
+        </div>
+
+        <div class="input-group">
+          <input
+            class="input-check-pw"
+            type="password"
+            placeholder="새로운 비밀번호를 입력해 주세요."
+          />
+          <input
+            class="input-check-pw"
+            type="password"
+            placeholder="새로운 비밀번호를 다시 입력해 주세요."
+          />
+        </div>
+
+        <div class="btn-popup-group">
+          <button id="btn-popup-confirm">확인</button>
+        </div>
+      </div>
+      <!-- END popup-update-pw -->
+  </body>
+</html>
