@@ -1,0 +1,56 @@
+.contentWrap {
+  display: flex;
+
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 500px;
+  height: 500px;
+
+  border: 1px solid #e4e4e4;
+
+  padding: 20px;
+}
+
+.logoSection {
+  margin: 32px;
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+.inputSection input {
+  box-sizing: border-box;
+
+  width: 400px;
+  height: 40px;
+
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+#btn-master-login {
+  color: #ffffff;
+  background-color: #42c2ff;
+
+  width: 400px;
+  height: 40px;
+
+  border: none;
+}
