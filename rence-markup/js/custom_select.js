@@ -59,4 +59,25 @@ $(function () {
     $('#comment-section').addClass('blind')
     $('.popup-background').addClass('blind')
   })
+
+  // 환경 설정 부분 팝업 관련
+  $('#btn-update-pw').on('click', function () {
+    $('#popup-update-pw').removeClass('blind')
+    $('.popup-background').removeClass('blind')
+  })
+
+  $('#btn-popup-close').on('click', function () {
+    $('#popup-update-pw').addClass('blind')
+    $('.popup-background').addClass('blind')
+  })
+
+  $('#btn-host-delete').on('click', function () {
+    $('#host-delete-popup').removeClass('blind')
+    $('.popup-background').removeClass('blind')
+  })
+
+  $('#delete-closeBtn').on('click', function () {
+    $('#host-delete-popup').addClass('blind')
+    $('.popup-background').addClass('blind')
+  })
 })
