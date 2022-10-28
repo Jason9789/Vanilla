@@ -17,11 +17,17 @@
   display: flex;
   align-items: center;
 
+  width: 100%;
   border-bottom: 1px solid #e4e4e4;
 
   padding-bottom: 20px;
 
   margin-bottom: 20px;
+}
+
+.titleSection.sales {
+  justify-content: space-between;
+  padding-bottom: 0;
 }
 
 .titleSection h1 {
@@ -50,6 +56,7 @@
 }
 
 .nav-item {
+  font-size: 14px;
   margin: 0;
   color: #808080;
   cursor: pointer;
@@ -68,14 +75,7 @@
 
   justify-content: space-between;
 
-  margin-bottom: 8px;
-}
-
-.boardWrap.review,
-.boardWrap.qna,
-.boardWrap.reserve {
   box-sizing: border-box;
-  background-color: #ffffff;
 
   width: 100%;
   height: auto;
@@ -83,6 +83,40 @@
   padding: 20px;
 
   border-radius: 15px;
+
+  margin-bottom: 8px;
+}
+
+.boardWrap.review,
+.boardWrap.qna,
+.boardWrap.reserve {
+  background-color: #ffffff;
+}
+
+.boardWrap.sales {
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 48%;
+  height: 400px;
+}
+
+.boardWrap.all-sales-list {
+  flex-direction: column;
+  justify-content: flex-start;
+
+  background-color: #ffffff;
+  width: 48%;
+  height: 700px;
+
+  overflow: scroll;
+}
+
+.all-sales-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.boardWrap.all-sales-list::-webkit-scrollbar-thumb {
+  background-color: #b2a4ff;
 }
 
 .boardWrap.reserve {
