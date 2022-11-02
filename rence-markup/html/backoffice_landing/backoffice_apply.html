@@ -224,6 +224,50 @@
             ></textarea>
           </div>
 
+          <div class="inputWrap backoffice_type">
+            <p>공간 태그</p>
+            <div class="option-group-column">
+              <div class="option-group-row">
+                <div class="option-item">
+                  <input
+                    type="checkbox"
+                    id="checkbox"
+                    name="backoffice_type"
+                    value="desk"
+                    readonly
+                  />
+                  <label>데스크</label>
+                </div>
+                <!-- END option-item -->
+                <div class="option-item">
+                  <input
+                    type="checkbox"
+                    id="checkbox"
+                    name="backoffice_type"
+                    value="meeting_room"
+                    readonly
+                  />
+                  <label>회의실</label>
+                </div>
+                <!-- END option-item -->
+                <div class="option-item">
+                  <input
+                    type="checkbox"
+                    id="checkbox"
+                    name="backoffice_type"
+                    value="office"
+                    readonly
+                  />
+                  <label>오피스</label>
+                </div>
+                <!-- END option-item -->
+              </div>
+              <!-- END option-group-row -->
+            </div>
+            <!-- END option-group-column -->
+          </div>
+          <!-- END inputWrap backoffice_type -->
+
           <div class="inputWrap option">
             <p>공간 옵션</p>
             <div class="option-group-column">
@@ -823,8 +867,20 @@
             <div class="filebox">
               <input class="upload-name" value="" placeholder="첨부 파일" />
               <label for="file">파일찾기</label>
-              <input type="file" id="file" accept="image/*" multiple />
+              <input
+                type="file"
+                id="multipartFile_room"
+                name="multipartFile_room"
+                accept=".jpg, .jpeg, .png"
+                multiple
+              />
             </div>
+            <input
+              type="file"
+              id="multipartFile_host"
+              name="multipartFile_host"
+              style="display: none"
+            />
           </div>
           <!-- END inputWrap image -->
 

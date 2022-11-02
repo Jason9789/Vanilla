@@ -134,19 +134,31 @@
           <span>공간 추가</span>
         </section>
         <section class="room-popup-input-section">
-          <div class="room-name-wrap">
+          <div class="room-input-wrap">
             <p>공간 이름</p>
             <input
               type="text"
+              name="room_name"
               id="input-room-name"
-              class="input-room-name"
+              class="room-input"
               placeholder="공간 이름을 입력해 주세요"
             />
           </div>
-          <div class="room-type-wrap">
+          <div class="room-input-wrap">
             <p>공간 타입</p>
+            <input
+              type="hidden"
+              name="room_type"
+              id="edit_room_type"
+              class="room_type"
+              value=""
+            />
             <div class="room-type-select" id="room-type-select">
-              <button id="insert-room-type-label" class="room-type-label">
+              <button
+                name="room_type"
+                id="insert-room-type-label"
+                class="room-type-label"
+              >
                 타입을 선택해 주세요
               </button>
               <ul class="insert-type-select-list blind">
@@ -160,6 +172,17 @@
             <!-- END room-type-select -->
           </div>
           <!-- END room-type-wrap -->
+          <div class="room-input-wrap">
+            <p>가격을 입력해 주세요.</p>
+            <input
+              type="number"
+              name="room_price"
+              id="input-price-name"
+              class="room-input"
+              placeholder="월 단위 가격을 입력해 주세요."
+              value=""
+            />
+          </div>
         </section>
         <!-- room-popup-input-section -->
         <div class="select-btn-group">
@@ -176,20 +199,31 @@
           <span>공간 변경</span>
         </section>
         <section class="room-popup-input-section">
-          <div class="room-name-wrap">
+          <div class="room-input-wrap">
             <p>공간 이름</p>
             <input
               type="text"
+              name="room_name"
               id="input-room-name"
-              class="input-room-name"
+              class="room-input"
               placeholder="공간 이름을 입력해 주세요"
-              value=""
             />
           </div>
-          <div class="room-type-wrap">
+          <div class="room-input-wrap">
             <p>공간 타입</p>
+            <input
+              type="hidden"
+              name="room_type"
+              id="edit_room_type"
+              class="room_type"
+              value=""
+            />
             <div class="room-type-select" id="room-type-select">
-              <button id="edit-room-type-label" class="edit-room-type-label">
+              <button
+                name="room_type"
+                id="edit-room-type-label"
+                class="room-type-label"
+              >
                 타입을 선택해 주세요
               </button>
               <ul class="edit-type-select-list blind">
@@ -203,6 +237,17 @@
             <!-- END room-type-select -->
           </div>
           <!-- END room-type-wrap -->
+          <div class="room-input-wrap">
+            <p>가격을 입력해 주세요.</p>
+            <input
+              type="number"
+              name="room_price"
+              id="input-price-name"
+              class="room-input"
+              placeholder="월 단위 가격을 입력해 주세요."
+              value=""
+            />
+          </div>
         </section>
         <!-- room-popup-input-section -->
         <div class="select-btn-group">

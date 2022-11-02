@@ -74,8 +74,12 @@
   border-radius: 8px;
 
   padding: 0 8px;
-
   margin-bottom: 12px;
+}
+
+.input-check-pw::placeholder {
+  color: red;
+  font-family: 'OTWelcome';
 }
 
 .btn-popup-group {

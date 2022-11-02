@@ -7,11 +7,13 @@ $(function () {
   })
 
   $('#btn-insert-cancel').click(function () {
+    $('.room_type').val('')
     $('#room-insert-section').addClass('blind')
     $('.popup-background').addClass('blind')
   })
 
   $('#btn-edit-cancel').click(function () {
+    $('.room_type').val('')
     $('#room-edit-section').addClass('blind')
     $('.popup-background').addClass('blind')
   })
@@ -36,7 +38,7 @@ $(function () {
 
   $('.insert-type-select-item').on('click', function () {
     let type = $(this).text()
-    console.log(type)
+    $('.room_type').val(type)
     $('#insert-room-type-label').text(type)
     $('#insert-room-type-label').css('color', '#000000')
     $('.insert-type-select-list').addClass('blind')
@@ -44,6 +46,7 @@ $(function () {
 
   $('.edit-type-select-item').on('click', function () {
     let type = $(this).text()
+    $('.room_type').val(type)
     $('#edit-room-type-label').text(type)
     $('#edit-room-type-label').css('color', '#000000')
     $('.edit-type-select-list').addClass('blind')
