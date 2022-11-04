@@ -2,13 +2,13 @@ p {
   margin: 0;
 }
 
-.qna-list {
+.review-list {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.qna-item {
+.review-item {
   box-sizing: border-box;
   display: flex;
   width: 100%;

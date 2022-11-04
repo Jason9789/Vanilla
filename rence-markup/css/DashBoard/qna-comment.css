@@ -1,3 +1,71 @@
+/* ************ */
+/* QNA 상세 보기  */
+/* ************ */
+.detail-qna-wrap.blind {
+  display: none;
+}
+
+.detail-qna-wrap {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 8px;
+  background-color: #f8f8f8;
+
+  padding: 8px 20px;
+}
+
+.question-section {
+  display: flex;
+  flex-direction: column;
+
+  padding: 12px 0;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column;
+
+  padding: 12px 0;
+}
+
+.question-title {
+  margin-right: 8px;
+  margin-bottom: 6px;
+  color: #b2a4ff;
+}
+
+.question-content {
+  font-size: 10px;
+}
+
+.answer-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer-title {
+  margin-right: 8px;
+  margin-bottom: 6px;
+  color: #ff3535;
+}
+
+.answer-date {
+  font-size: 10px;
+  color: #808080;
+}
+
+.answer-content {
+  font-size: 10px;
+}
+
 /* **************** */
 /* 문의 답글 남기기 팝업 */
 /* **************** */

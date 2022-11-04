@@ -74,7 +74,7 @@ $(function () {
   })
 
   // 리뷰 답글 작성
-  $('.review-add').on('click', function () {
+  $('.qna-add').on('click', function () {
     $('#comment-section').removeClass('blind')
     $('.popup-background').removeClass('blind')
   })
