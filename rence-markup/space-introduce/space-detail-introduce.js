@@ -99,6 +99,9 @@ $(function () {
 
   // 2022/11/17 신규 코드
 
+  // ***************
+  // 선택 날짜 요일 체크
+  // ***************
   function getDayOfWeek(date) {
     const week = [0, 1, 2, 3, 4, 5, 6]
     const dayOfWeek = week[new Date(date).getDay()]
@@ -110,11 +113,26 @@ $(function () {
     $('#reserve-time-boundary').css('display', 'none')
   }
 
+  // 예약 선택 시간
+  let pick_time_list = []
+
+  // 예약 선택 시간 boundary
+  // ex) 11, 16시 선택 시
+  // 이 배열에는 11, 12, 13, 14, 15, 16이 들어감.
+  // 예약이 가능한지 체크하기 위함.
+  // 중간 시간에 예약이 있으면 불가능함.
+  let check_reserve_time = []
+
   // 시간 선택
   $('.type-border-txt.time-input').change(function () {
+    $('.time-boundary-item').removeClass('selected')
+    pick_time_list = []
     pickerDate = $('.type-border-txt.time-input').val()
     let dayOfWeek = getDayOfWeek(pickerDate)
 
+    // ***********************
+    // 해당 요일의 운영 시간 가져오기
+    // ***********************
     let stime = ''
     let etime = ''
 
@@ -152,14 +170,59 @@ $(function () {
     })
   })
 
+  // pick_time_list에 시간이 하나만 들어가 있으면 1시간 대여
+  // 2개 있으면 그 사이 시간을 대여하는 것.
   $('.time-boundary-item').on('click', function () {
-    console.log($(this).val())
-    console.log($('.type-border-txt.time-input').val())
-  })
+    if ($(this).hasClass('selected')) {
+      // 선택 취소 했을 때
+      pick_time_list.pop($(this).val())
+      $(this).toggleClass('selected')
+    } else {
+      // 선택 되었을 때
+      if (pick_time_list.length < 2) {
+        pick_time_list.push($(this).val())
+        pick_time_list.sort()
+        $(this).toggleClass('selected')
+      }
+    }
 
-  // $('.ui-datepicker-close').click(function () {
-  //   console.log($('.type-border-txt.time-input').val())
-  // })
+    // 예약 불가 처리
+    if (pick_time_list.length == 2) {
+      check_reserve_time = []
+      for (var t = pick_time_list[0]; t <= pick_time_list[1]; t++) {
+        check_reserve_time.push(t)
+      }
+
+      // 예약 가능 유무 체크
+      let flag = 0
+      let tmp_time_range = []
+
+      $('.time-boundary-list li').each(function (index, item) {
+        if (check_reserve_time.includes($(this).val())) {
+          console.log($(this).val())
+          tmp_time_range.push($(this).val())
+        }
+      })
+
+      if (
+        JSON.stringify(check_reserve_time) === JSON.stringify(tmp_time_range)
+      ) {
+        flag = 1
+      } else {
+        flag = 0
+      }
+
+      // 선택 시간 중간에 예약이 있어서
+      // 예약이 불가능 할 때, 팝업 띄우기
+      // TODO: 단, 이 부분은 예약 테이블과 연결하여 실 테스트 해봐야 함.
+      if (flag === 0) {
+        $('.fixed-popup').removeClass('blind')
+        $('.using-time-fail-txt:eq(0)').html(
+          '선택 시간 사이에 예약이 존재하여<br><br>해당 시간은 예약할 수 없습니다.',
+        )
+      }
+    }
+  })
 
   /*** 예약 가능 여부 버튼 클릭 ***/
   $('#check_available').click(function () {
@@ -186,16 +249,18 @@ $(function () {
             let param = new URLSearchParams(query)
             let backoffice_no = param.get('backoffice_no')
             let room_no = $('#type-choice-value').attr('room_no')
-            let reserve_stime = $('.time-input:eq(0)').val()
-            let reserve_etime = $('.time-input:eq(1)').val()
+            let reserve_date = pickerDate
 
+            // reserve_stime, reserve_etime은
+            // 11 과 같은 숫자만 전송됨 -> 서버에서 처리 예정
             $.ajax({
               url: '/rence/reserve_checkOK',
               type: 'POST',
               dataType: 'json',
               data: {
-                reserve_stime: reserve_stime,
-                reserve_etime: reserve_etime,
+                reserve_date: reserve_date,
+                reserve_stime: pick_time_list[0],
+                reserve_etime: pick_time_list[1],
                 room_no: room_no,
                 backoffice_no: backoffice_no,
                 user_no: $.cookie('user_no'),

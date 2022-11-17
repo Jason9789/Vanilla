@@ -890,6 +890,9 @@ input[type='file'] {
   height: 28px;
   padding: 4px 8px;
 
+  margin-right: 12px;
+  margin-bottom: 6px;
+
   border: 1px solid #2ee49d;
   border-radius: 6px;
 
@@ -903,9 +906,9 @@ input[type='file'] {
   user-select: none;
 }
 
-.time-boundary-item {
-  margin-right: 12px;
-  margin-bottom: 6px;
+.time-boundary-item.selected {
+  background-color: #2ee49d;
+  color: #ffffff;
 }
 
 /* ***************** */
