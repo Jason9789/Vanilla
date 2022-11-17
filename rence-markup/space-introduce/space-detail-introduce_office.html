@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="./space-detail-introduce.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="./jquery-ui-timepicker.css" />
+
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="./timepicker.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="../JS/user_popup.js"></script>
+    <script src="../JS/header.js"></script>
+    <script src="./space_detail_introduce_office.js"></script>
+</head>
+<body>
+    <div class ="pageWrap">
+        <section class ="headerWrap">
+            <div class = "logo-section">
+                <span>LOGO</span>
+            </div>
+            <div class = "searchBar-section">
+                <div class="searchBar-wrap">
+                    <div id="type" class = "sb_1 type">
+                        <span>타입</span>
+                    </div>
+                    <div id="location" class = "sb_1">
+                        <span>장소</span>
+                    </div>
+                    <div class = "sb_2">
+                        <input type="text" placeholder="검색어를 입력하세요." id="input_searchBar"/>
+                    </div>
+                    <div class = "searchBar-btnWrap">
+                        <img src="../IMG/header/Search Button.svg" alt="searchBar-btn" class="searchBar-btn"/>
+                    </div>
+
+                    <!-- CUSTOM SELECT -->
+                    <section>
+                        <!-- START TYPE SELECT -->
+                        <div id = "custom-type-select" class="type-select-wrap blind">
+                            <ul class="type-select">
+                                <li id = "type-list-desk" class="type-select-list">데스크</li>
+                                <li id = "type-list-metting-room" class="type-select-list">회의실</li>
+                                <li id = "type-list-office" class="type-select-list">오피스</li>
+                            </ul>
+                        </div>
+                        <!-- END TYPE SELECT -->
+
+                        <!-- START Location SELECT -->
+                        <div id = "custom-location-select" class="location-select-wrap blind">
+                            <ul id = "location-city" class="location-select">
+                                <li class="location-select-list">데스크</li>
+                                <li class="location-select-list">회의실</li>
+                                <li class="location-select-list">오피스</li>
+                                <li class="location-select-list">데스크</li>
+                                <li class="location-select-list">회의실</li>
+                                <li class="location-select-list">오피스</li>
+                                <li class="location-select-list">데스크</li>
+                                <li class="location-select-list">회의실</li>
+                                <li class="location-select-list">오피스</li>
+                            </ul>
+                            <ul id = "location-town" class="location-select">
+                                <li class="location-select-list">데스크</li>
+                                <li class="location-select-list">회의실</li>
+                                <li class="location-select-list">오피스</li>
+                                <li class="location-select-list">데스크</li>
+                                <li class="location-select-list">회의실</li>
+                                <li class="location-select-list">오피스</li>
+                                <li class="location-select-list">데스크</li>
+                                <li class="location-select-list">회의실</li>
+                                <li class="location-select-list">오피스</li>
+                            </ul>
+                        </div>
+                        <!-- END TYPE SELECT -->
+                    </section>
+                </div>
+            </div>
+            <div class="userMenu-section ">
+                <!-- 로그인 전 유저 메뉴 -->
+                <section id="before_login" class="">
+                    <div id = "before_userMenu" class ="userMenu">
+                        <img src="../IMG/header/user_menu.svg" alt="user_menu_img" class="user_menu_img"/>
+                        <img src="../IMG/header/bx_user-circle.png" alt="user_profile_img" class="user_profile_img"/>
+                    </div>
+                    
+                    <!-- CUSTOM SELECT -->
+                    <div class = "custom-select-user blind">
+                        <ul class="user-select-wrap">
+                            <li id = "go-login" class="user-select-list">로그인</li>
+                            <li id = "go-join" class="user-select-list">회원가입</li>
+                            <li id = "go-backOffice" class="user-select-list">공간등록신청</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- 로그인 후 유저 메뉴 -->
+                <section id="after_login"  class="blind">
+                    <div id = "after_userMenu" class ="userMenu">
+                        <img src="../IMG/header/user_menu.svg" alt="user_menu_img" class="user_menu_img"/>
+                        <img src="../IMG/header/loopy.jpg" alt="user_profile_img" class="user_profile_img"/>
+                    </div>
+    
+                    <!-- CUSTOM SELECT -->
+                    <div class = "custom-select-user blind">
+                        <ul class="user-select-wrap">
+                            <li id = "go-myPage" class="user-select-list">마이페이지</li>
+                            <li id = "go-backOffice" class="user-select-list">공간등록신청</li>
+                            <li id = "go-logOut" class="user-select-list">로그아웃</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class ="contentWrap">
+            <section class="space-detail-introduce-section">
+                <div class="space-detail-introduce-wrap">
+                    <section class="space-detail-title-section">
+                        <span  class="space-detail-company-name">
+                            오라운트
+                        </span>
+                        <span class="space-detail-type">데스크</span>
+                    </section>
+                    <section class="space-detail-info-section">
+                        <div class="space-rating">
+                            <img src="../IMG/common/grey-star.svg" class="space-rating-icon" alt="space-rating-icon" />
+                            <span class="space-info-txt">4.32</span>
+                        </div>
+                        <div class="space-tags">
+                            <span class="space-info-txt tag-txt">#경기광주</span>
+                            <span class="space-info-txt tag-txt">#스터디룸</span>
+                            <span class="space-info-txt tag-txt">#1인데스크</span>
+                            <span class="space-info-txt tag-txt">#단독미팅룸</span>
+                        </div>
+                    </section>
+                    <div class="space-location">
+                        <img src="../IMG/common/location-icon.svg" class="space-location-icon" alt="space-location-icon" />
+                        <span class="space-info-txt">경기도 광주시 경안로 98번길 1층</span>
+                    </div>
+                    <section class="spage-imgs-section">
+                        <div class="window">
+                            <ul class="container">
+                                <li class="img">
+                                    <img src="../IMG/common/18.jpg" class="company-img"/>
+                                </li>
+                                <li class="img">
+                                    <img src="../IMG/common/18.jpg" class="company-img"/>
+                                </li>
+                                <li class="img">
+                                    <img src="../IMG/common/18.jpg" class="company-img"/>
+                                </li>
+                                <li class="img">
+                                    <img src="../IMG/common/18.jpg" class="company-img"/>
+                                </li>
+                                <li class="img">
+                                    <img src="../IMG/common/18.jpg" class="company-img"/>
+                                </li>
+                                <li class="img">
+                                    <img src="../IMG/common/18.jpg" class="company-img"/>
+                                </li>
+                                <li class="img">
+                                    <img src="../IMG/common/18.jpg" class="company-img"/>
+                                </li>
+                            </ul>
+
+                            <div class="button-container">
+                                <span class="prev button-size"><</span>
+                                <span class="next button-size">></span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="dynamic-section">
+                        <!-- START un-fixed-section -->
+                        <section class="un-fixed-section">
+                            <section class="menu-tab-section">
+                                <ul class="menu-tab">
+                                    <li class="menu click-menu" menu="info">공간 소개</li>
+                                    <li class="menu" menu="qna">문의</li>
+                                    <li class="menu" menu="review">후기</li>
+                                </ul>
+                            </section>
+
+                            <!-- 공간 소개 -->
+                            <div class="space-description-wrap">
+                                <span class="space-description">
+                                    국가는 대외무역을 육성하며, 이를 규제·조정할 수 있다. 선거운동은 각급 선거관리위원회의 관리하에 법률이 정하는 범위안에서 하되, 균등한 기회가 보장되어야 한다. 대한민국의 경제질서는 개인과 기업의 경제상의 자유와 창의를 존중함을 기본으로 한다. 모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다.<br><br>
+                                    국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 대법원장과 대법관이 아닌 법관은 대법관회의의 동의를 얻어 대법원장이 임명한다. 국민경제자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 대통령이 궐위된 때 또는 대통령 당선자가 사망하거나 판결 기타의 사유로 그 자격을 상실한 때에는 60일 이내에 후임자를 선거한다.<br><br>
+                                    국가는 대외무역을 육성하며, 이를 규제·조정할 수 있다. 선거운동은 각급 선거관리위원회의 관리하에 법률이 정하는 범위안에서 하되, 균등한 기회가 보장되어야 한다. 대한민국의 경제질서는 개인과 기업의 경제상의 자유와 창의를 존중함을 기본으로 한다. 모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다.<br><br>
+                                    국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 대법원장과 대법관이 아닌 법관은 대법관회의의 동의를 얻어 대법원장이 임명한다. 국민경제자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 대통령이 궐위된 때 또는 대통령 당선자가 사망하거나 판결 기타의 사유로 그 자격을 상실한 때에는 60일 이내에 후임자를 선거한다.<br><br>
+                                </span>
+
+                                <div class="option-wrap">
+                                    <label class="section-title">
+                                        옵션
+                                    </label>
+                                    <ul class="option-list-wrap">
+                                        <li class="option-list">독서실 책상</li>
+                                        <li class="option-list">4인 미팅룸</li>
+                                        <li class="option-list">전자레인지</li>
+                                        <li class="option-list">독서실 책상</li>
+                                        <li class="option-list">4인 미팅룸</li>
+                                        <li class="option-list">전자레인지</li>
+                                        <li class="option-list">독서실 책상</li>
+                                        <li class="option-list">4인 미팅룸</li>
+                                        <li class="option-list">전자레인지</li>
+                                        <li class="option-list">독서실 책상</li>
+                                        <li class="option-list">4인 미팅룸</li>
+                                        <li class="option-list">전자레인지</li>
+                                    </ul>
+                                </div>
+
+                                <div class="around-info-wrap">
+                                    <label class="section-title">
+                                        주변 시설
+                                    </label>
+                                    <ul id ="" class="option-list-wrap">
+                                        <li class="option-list">주차장</li>
+                                        <li class="option-list">편의점</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 문의 -->
+                            <div class="question-wrap blind">
+                                <section class="question-wrap-title">
+                                    <section class="question-left">
+                                        <span class="big-title">문의</span>
+                                        <span class="small-title">3개</span>
+                                    </section>
+                                    <section id="question-create-btn" class="question-right">
+                                        <span>문의하기</span>
+                                    </section>
+
+                                    <!-- 문의하기 팝업창 -->
+                                    <div id="question-popup" class="question-popup-wrap blind">
+                                        <span class="question-popup-title">문의하기</span>
+
+                                        <section class="question-popup-type-select-wrap">
+                                            <span class="question-popup-small-title">문의할 공간 타입</span>
+
+                                            <!-- select 열 때 open-select추가 -->
+                                            <div class="question-popup-select-val-wrap">
+                                                <span id="question-select-choice" class="question-popup-select-value">
+                                                    타입을 선택해 주세요
+                                                </span>
+                                                <img src="../IMG/space-introduce/full-dropdown.svg" alt="full-dropdown" class="full-dropdown"></img>
+                                            </div>
+
+                                            <ul class="question-popup-select blind">
+                                                <li class="question-popup-select-li">
+                                                    101호 (1인 데스크)
+                                                </li>
+                                                <li class="question-popup-select-li">
+                                                    102호 (1인 데스크)
+                                                </li>
+                                                <li class="question-popup-select-li">
+                                                    103호 (4인 미팅룸)
+                                                </li>
+                                                <li class="question-popup-select-li">
+                                                    104호 (1인 미팅룸)
+                                                </li>
+                                                <li class="question-popup-select-li">
+                                                    104호 (1인 미팅룸)
+                                                </li>
+                                                <li class="question-popup-select-li">
+                                                    104호 (1인 미팅룸)
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section class="textarea-section">
+                                            <textarea id="question-write" class="question-write"></textarea>
+                                            <div class="txt-length-wrap">
+                                                <span class="qna-length">0</span>
+                                                <span class="total-length">/ 500</span>
+                                            </div>
+                                        </section>
+                                        <section class="quest-popup-btn-section">
+                                            <span id="question-create-btn" class="popup-create-btn">등록</span>
+                                            <span id="question-close-btn" class="popup-close-btn">취소</span>
+                                        </section>
+                                    </div>
+                                </section>
+
+                                <section class="quest-list-section">
+                                    <ul class="quest-list-wrap">
+                                        <li class="quest-list">
+                                            <section>
+                                                <img src="../IMG/header/loopy.jpg" alt="write-user-img" class="write-user-img" />
+                                            </section>
+                                            <section class="quest-content-section">
+                                                <ul class="quest-content-wrap">
+                                                    <li class="quest-content-list quest-content-writer">팡근</li>
+                                                    <li class="quest-content-list quest-content">장기 예약 문의도 가능할까요?</li>
+                                                    <li class="quest-content-list quest-content-date">2022.10.21</li>
+                                                </ul>
+                                            </section>
+                                            <section class="answer-section">
+
+                                            </section>
+                                        </li>
+                                    </ul>
+                                </section>
+
+                                <!-- FINAL -->
+                                <section class="paging-section blind">
+                                    <div class="paging-wrap">
+                                        <span class="paging-box"><<</span>
+                                        <span class="paging-box"><</span>
+                                        <span class="paging-box paging-num choice sample">1</span>
+                                        <span class="paging-box paging-num un-choice sample">2</span>
+                                        <span class="paging-box paging-num un-choice sample">3</span>
+                                        <span class="paging-box paging-num un-choice sample">4</span>
+                                        <span class="paging-box">></span>
+                                        <span class="paging-box">>></span>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- 후기 -->
+                            <div id="review-wrap" class="question-wrap blind">
+                                <section class="question-wrap-title">
+                                    <section class="question-left">
+                                        <span class="big-title">후기</span>
+                                        <span class="small-title">3개</span>
+                                    </section>
+                                    <section id="review-write-btn" class="question-right">
+                                        <span>후기쓰기</span>
+                                    </section>
+
+                                    <!-- 후기쓰기 팝업창 -->
+                                    <div id="review-popup" class="review-popup-wrap blind">
+                                        <span class="question-popup-title">후기 남기기</span>
+
+                                        <section class="question-popup-type-select-wrap">
+                                            <span class="question-popup-small-title">문의할 공간 타입</span>
+
+                                            <!-- select 열 때 open-select추가 -->
+                                            <div class="question-popup-select-val-wrap">
+                                                <span class="question-popup-select-value">
+                                                    선택했던 타입명
+                                                </span>
+                                            </div>
+                                        </section>
+                                        <section class="textarea-section">
+                                            <textarea id="review-write" class="question-write"></textarea>
+                                            <div class="txt-length-wrap">
+                                                <span class="review-length">0</span>
+                                                <span class="review-total-length">/ 500</span>
+                                            </div>
+                                        </section>
+                                        <section class="popup-star-section">
+                                            <span class="popup-star-title">별점</span>
+                                            <ul class="popup-star-wrap">
+                                                <li id="star_1" class="popup-star-li">
+                                                    <img src="../IMG/common/y-star.svg" alt="후기 리뷰 별점 이미지" class="y-star r-star blind"/>
+                                                    <img src="../IMG/common/star.svg" alt="후기 리뷰 별점 이미지" class="g-star r-star "/>
+                                                </li>
+                                                <li id="star_2" class="popup-star-li">
+                                                    <img src="../IMG/common/y-star.svg" alt="후기 리뷰 별점 이미지" class="y-star r-star blind"/>
+                                                    <img src="../IMG/common/star.svg" alt="후기 리뷰 별점 이미지" class="g-star r-star "/>
+                                                </li>
+                                                <li id="star_3" class="popup-star-li">
+                                                    <img src="../IMG/common/y-star.svg" alt="후기 리뷰 별점 이미지" class="y-star r-star blind"/>
+                                                    <img src="../IMG/common/star.svg" alt="후기 리뷰 별점 이미지" class="g-star r-star"/>
+                                                </li>
+                                                <li id="star_4" class="popup-star-li">
+                                                    <img src="../IMG/common/y-star.svg" alt="후기 리뷰 별점 이미지" class="y-star r-star blind"/>
+                                                    <img src="../IMG/common/star.svg" alt="후기 리뷰 별점 이미지" class="g-star r-star"/>
+                                                </li>
+                                                <li id="star_5" class="popup-star-li">
+                                                    <img src="../IMG/common/y-star.svg" alt="후기 리뷰 별점 이미지" class="y-star r-star blind"/>
+                                                    <img src="../IMG/common/star.svg" alt="후기 리뷰 별점 이미지" class="g-star r-star"/>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <!-- <section class="review-upload-section">
+                                            <span class="review-upload-btn">
+                                                이미지 등록
+                                            </span>
+                                            <input type="file" class="file">
+                                            <input type="text" class="review-upload-value" readonly/>
+                                        </section> -->
+                                        <section class="quest-popup-btn-section">
+                                            <span id="review-create-btn" class="popup-create-btn">등록</span>
+                                            <span id="review-close-btn" class="popup-close-btn">취소</span>
+                                        </section>
+                                    </div>
+                                </section>
+
+                                <section class="quest-list-section">
+                                    <ul class="quest-list-wrap">
+                                        <li class="quest-list">
+                                            <section>
+                                                <img src="../IMG/header/loopy.jpg" alt="write-user-img" class="write-user-img" />
+                                            </section>
+                                            <section class="quest-content-section">
+                                                <ul class="quest-content-wrap">
+                                                    <li class="quest-content-list quest-content-writer">
+                                                        <span class="quest-writer">팡근</span>
+                                                        <span class="review-star-wrap">
+                                                            <img src="../IMG/common/star.svg" class="review-star-img" alt="review-star-img" />
+                                                            <span class="review-star-num">4</span>
+                                                        </span>
+                                                    </li>
+                                                    <li class="quest-content-list quest-content">혼자 공부할 때 너무 좋아요!</li>
+                                                    <li class="quest-content-list quest-content-date">2022.10.21</li>
+                                                </ul>
+                                            </section>
+                                        </li>
+                                    </ul>
+                                </section>
+
+                                <section class="paging-section blind">
+                                    <div class="paging-wrap">
+                                        <span class="paging-box"><<</span>
+                                        <span class="paging-box"><</span>
+                                        <span class="paging-box paging-num choice sample">1</span>
+                                        <span class="paging-box paging-num un-choice sample">2</span>
+                                        <span class="paging-box paging-num un-choice sample">3</span>
+                                        <span class="paging-box paging-num un-choice sample">4</span>
+                                        <span class="paging-box">></span>
+                                        <span class="paging-box">>></span>
+                                    </div>
+                                </section>
+                            </div>
+
+                        </section>
+                        <!-- END un-fixed-section -->
+
+                        <!-- START fixed-section -->
+                        <section class="fixed-section">
+                            <section class="fixed-popup blind">
+                                <div class="alert-popup">
+                                    <section class="alert-txt-section">
+                                        <div class="using-time-fail-txt">
+                                            해당 시간 예약이 불가능합니다.<br><br>
+                                            다른 시간대를 선택하여 주십시오.
+                                        </얖>
+                                    </section>
+                                    <section id="time-fail-close-btn" class="alert-btn-section">
+                                        <span>확인</span>
+                                    </section>
+                                </div>
+                            </section>
+
+                            <section class="fixed-section-top">
+                                <section class="running-time-section">
+                                    <label class="fixed-section-label">
+                                        운영 시간
+                                    </label>
+                                    <ul class="running-time-li-wrap">
+                                        <li class="running-time-li">
+                                            <label>일</label>
+                                            <span>11:00 ~ 24:00</span>
+                                        </li>
+                                        <li class="running-time-li">
+                                            <label>월</label>
+                                            <span>11:00 ~ 24:00</span>
+                                        </li>
+                                        <li class="running-time-li">
+                                            <label>화</label>
+                                            <span>11:00 ~ 24:00</span>
+                                        </li>
+                                        <li class="running-time-li">
+                                            <label>수</label>
+                                            <span>11:00 ~ 24:00</span>
+                                        </li>
+                                        <li class="running-time-li">
+                                            <label>목</label>
+                                            <span>11:00 ~ 24:00</span>
+                                        </li>
+                                        <li class="running-time-li">
+                                            <label>금</label>
+                                            <span>11:00 ~ 24:00</span>
+                                        </li>
+                                        <li class="running-time-li">
+                                            <label>토</label>
+                                            <span>11:00 ~ 24:00</span>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="type-location-txt">
+                                    <div class="space-type-loca">
+                                        <label class="fixed-section-label">
+                                            공간 유형
+                                        </label>
+                                        <span class="fixed-section-txt">
+                                            오피스
+                                        </span>
+                                    </div>
+                                    <div class="space-type-loca">
+                                        <label class="fixed-section-label">
+                                            위치
+                                        </label>
+                                        <div  class="fixed-section-loca">
+                                            <img src="../IMG/common/location-icon.svg"  class="space-loca-icon" alt="location-icon">
+                                            <span class="fixed-section-txt">
+                                                경기도 광주시
+                                            </span>
+                                        </div>
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="reserve-type-section">
+                                <label class="fixed-section-label">
+                                    예약 공간
+                                </label>
+
+                                <!-- 타입 셀렉트 열 때 open-select클래스 add해야함 -->
+                                <!-- 타입 셀렉트 닫을 때 open-select클래스 remove해야함 -->
+                                <div class="type-border">
+                                    <span class="type-border-txt room-li-txt">오피스 공간을 선택해주세요.</span>
+                                    <img src="../IMG/space-introduce/full-dropdown.svg" alt="full-dropdown" class="full-dropdown"></img>
+                                </div>
+
+                                <!-- CUSTOM SELECT SECTION -->
+                                <ul class="custom-select-type blind">
+                                    <li class="custom-select-type-list">
+                                        <span class="room-name">
+                                            101호 (오피스)
+                                        </span>
+                                        <span class="room-price-unit">
+                                            <span class="room-price-big">
+                                                10,000원
+                                            </span>
+                                            <span class="room-unit-small">/시간</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="using-time-section">
+                                <section class="time-boundary">
+                                    <label class="fixed-section-label">
+                                        체크인 시간
+                                    </label>
+                                    <div class="time-select-wrap">
+                                        <input type="text" class="type-border-txt time-input" placeholder="날짜/시간 추가" readonly/>
+                                        <img src="../IMG/space-introduce/full-dropdown.svg" alt="full-dropdown" class="full-dropdown"></img>
+                                    </div>
+                                </section>
+                                <section class="time-boundary">
+                                    <label class="fixed-section-label">
+                                        대여 개월 수
+                                    </label>
+                                    <div id="month_section" class="time-select-wrap">
+                                        <span class="type-border-txt month-select-txt">개월수</span>
+                                        <img src="../IMG/space-introduce/full-dropdown.svg" alt="full-dropdown" class="full-dropdown"></img>
+
+                                        <div class="month-select-wrap blind">
+                                            <ul class="month-select">
+                                                <li class="month-select-li" month="1">1개월</li>
+                                                <li class="month-select-li" month="2">2개월</li>
+                                                <li class="month-select-li" month="3">3개월</li>
+                                                <li class="month-select-li" month="4">4개월</li>
+                                                <li class="month-select-li" month="5">5개월</li>
+                                                <li class="month-select-li" month="6">6개월</li>
+                                                <li class="month-select-li" month="7">7개월</li>
+                                                <li class="month-select-li" month="8">8개월</li>
+                                                <li class="month-select-li" month="9">9개월</li>
+                                                <li class="month-select-li" month="10">10개월</li>
+                                                <li class="month-select-li" month="11">11개월</li>
+                                                <li class="month-select-li" month="12">12개월</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                                <span class="duration blind">기간 | 2022.10.11 ~ 2023.10.11</span>
+                            </section>
+                            <section class="maybe-pay-section blind">
+                                <label class="fixed-section-label">
+                                    예상 결제 금액
+                                </label>
+                                <span class="fixed-section-label">
+                                    40,000원
+                                </span>
+                            </section>
+                            <section id="check_available" class="btn-section">
+                                <span>예약 가능 여부 확인하기</span>
+                            </section>
+                        </section>
+                        <!-- END fixed-section -->
+                    </section>
+                </div>
+            </section>
+
+            <section id = "footerWrap">
+                <h5>© Golfzon Tech Academy, Inc. All rights reserved.</h5>
+            </section>
+        </section>
+    </div>
+
+    <div class="popup-background blind">
+        <!-- START LOGIN SECTION -->
+        <div id="login-section" class="blind">
+            <section class="login-popup-logo-section">
+                <span>LOGO</span>
+            </section>
+            <section class="login-popup-input-section">
+                <input type="text" id="login-id" class="login-popup-input" placeholder="아이디를 입력하세요."/>
+                <input type="password" id="login-pw" class="login-popup-input" placeholder="비밀번호를 입력하세요."/>
+            </section>
+            <section class="login-popup-btn-section">
+                <input type="button" id="login-btn" value="로그인">
+                <div class="txt-btn-wrap">
+                    <span class="txt-btn">아이디 찾기</span>
+                    <span class="txt-btn">비밀번호 찾기</span>
+                    <span class="txt-btn">회원가입</span>
+                </div>
+            </section>
+        </div>
+        <!-- END LOGIN SECTION -->
+        
+        <!-- START JOIN SECTION -->
+        <div id="join-section" class="blind">
+            <section class="join-popup-title-section">
+                <span>회원가입</span>
+            </section>
+            <section class="join-popup-input-section">
+                <div class="input-wrap">
+                    <div class="input-check">
+                        <input type="email" id="join-email" class="join-popup-input-short" placeholder="이메일"/>
+                        <input type = "button" id="check_email" class="join-popup-check-btn" value="인증하기"/>
+                    </div>
+                    <span class="warning-text blind">다시 시도해주세요.</span>
+                </div>
+                <div class="input-wrap">
+                    <div class="input-check">
+                        <input type="text" id="join-email-code" class="join-popup-input-short" placeholder="인증번호"/>
+                        <input type = "button" id="check_email-code" class="join-popup-check-btn" value="확인"/>
+                    </div>
+                    <span class="warning-text blind">다시 시도해주세요.</span>
+                </div>
+                <div class="input-wrap">
+                    <div class="input-check">
+                        <input type="text" id="join-id" class="join-popup-input-short" placeholder="아이디"/>
+                        <input type = "button" id="check_id" class="join-popup-check-btn" value="중복확인"/>
+                    </div>
+                    <span class="warning-text">이미 아이디가 존재합니다.</span>
+                </div>
+                <input type="password" id="join-pw" class="join-popup-input" placeholder="비밀번호"/>
+                <input type="password" id="join-re-pw" class="join-popup-input" placeholder="비밀번호 재입력"/>
+                <input type="text" id="join-name" class="join-popup-input" placeholder="이름"/>
+                <input type="text" id="join-tel" class="join-popup-input" placeholder="전화번호(-없이 입력)"/>
+                <input type="text" id="join-birth" class="join-popup-input" placeholder="생년월일(숫자로만 입력)"/>
+            </section>
+            <section class="join-popup-btn-section">
+                <input type="button" id="join-btn" value="회원가입">
+            </section>
+        </div>
+        <!-- END LOGIN SECTION -->
+
+        <!-- START FIND-ID SECTION -->
+        <div id="find-id-section" class="find-section blind">
+            <section class="find-popup-logo-section">
+                <span>아이디 찾기</span>
+            </section>
+            <section class="find-popup-input-section">
+                <span class="find-guide-txt">회원가입 시 입력한 이메일을 입력해주세요.</span>
+                <input type="email" id="find-id-email" class="find-id-popup-input" placeholder="이메일을 입력하세요."/>
+            </section>
+            <section class="find-popup-btn-section">
+                <input type="button" id="find-id-btn" class="find-btn" value="메일 보내기">
+        </div>
+        <!-- END FIND-ID SECTION -->
+
+        <!-- START FIND-PW SECTION -->
+        <div id="find-pw-section" class="find-section blind">
+            <section class="find-popup-logo-section">
+                <span>비밀번호 찾기</span>
+            </section>
+            <section class="find-popup-input-section">
+                <div class="email-wrap">
+                    <span class="find-guide-txt">회원가입 시 입력한 이메일을 입력해주세요.</span>
+                    <input type="email" id="find-pw-email" class="find-popup-input" placeholder="이메일을 입력하세요."/>
+                </div>
+                <div>
+                    <span class="find-guide-txt">회원가입 시 입력한 아이디를 입력해 주세요.</span>
+                    <input type="text" id="find-pw-id" class="find-popup-input" placeholder="비밀번호를 입력하세요."/>
+                </div>
+            </section>
+            <section class="find-popup-btn-section">
+                <input type="button" id="find-pw-btn" class="find-btn" value="비밀번호 찾기">
+        </div>
+        <!-- END FIND-PW SECTION -->
+
+        <!-- START LOGOUT CONFIRM POPUP -->
+        <div id ="logout-popup" class="confirm-popup blind">
+            <section class="confirm-txt-section">
+                <span class="logout-txt">로그아웃 하시겠습니까?</span>
+            </section>
+            <section class="confirm-btn-section">
+                <div class="confirm-yesBtn">로그아웃</div>
+                <div id="logout-closeBtn" class="confirm-noBtn">닫기</div>
+            </section>
+        </div>
+    </div>
+
+    <div class="popup-background blind">
+        <!-- START SUCCESS CUSTOM ALERT POPUP -->
+        <div id ="success-alert-popup" class="alert-popup blind">
+            <section class="alert-txt-section">
+                <span>해당 이메일로 비밀번호를 전송하였습니다.</span>
+            </section>
+            <section id = "success-alert-btn" class="alert-btn-section">
+                <span>확인</span>
+            </section>
+        </div>
+
+        <!-- START FAIL CUSTOM ALERT POPUP -->
+        <div id ="fail-alert-popup" class="alert-popup blind">
+            <section class="alert-txt-section">
+                <span>해당 이메일로 가입된 회원이 없습니다.</span>
+            </section>
+            <section id = "fail-alert-btn" class="alert-btn-section">
+                <span>확인</span>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
