@@ -1,0 +1,51 @@
+.host-update-form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 520px;
+  height: auto;
+
+  padding: 20px;
+  margin-bottom: 500px;
+
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+/* ************************** */
+/* Input hash tag Information */
+/* ************************** */
+.hashTag-area {
+  width: 340px;
+}
+
+#tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  width: 340px;
+}
+
+.tag-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b2a4ff;
+  color: #ffffff;
+  padding: 4px 8px;
+
+  font-size: 12px;
+  border-radius: 8px;
+
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.del-btn {
+  font-size: 12px;
+  margin-left: 4px;
+
+  cursor: pointer;
+}
