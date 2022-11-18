@@ -139,3 +139,84 @@
 .ct-header-cell.reserve {
   font-size: 14px;
 }
+
+/* ************* */
+/* CUSTOM POPUP  */
+/* ************* */
+#popup-reserve-cancel,
+#popup-write-cancel-email,
+#popup-send-mail,
+#popup-warning {
+  box-sizing: border-box;
+  width: 440px;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+
+  padding: 20px;
+}
+
+.popupTitleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  border-bottom: none;
+
+  padding-bottom: 20px;
+
+  margin-bottom: 20px;
+}
+
+.popupTitleSection h1 {
+  margin: 0 12px 0 0;
+}
+
+.popupTitleSection p {
+  margin: 0 0 8px 0;
+}
+
+.btn-popup-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+#cancel-mail-text {
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  resize: none;
+
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+  outline-color: #b2a4ff;
+
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.btn-popup-group button {
+  width: 100%;
+  height: 32px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+#btn-popup-close,
+#btn-mail-popup-close,
+#btn-send-mail-popup-close {
+  color: #ffffff;
+
+  background-color: #c4c4c4;
+}
+
+#btn-popup-confirm,
+#btn-mail-popup-confirm {
+  color: #ffffff;
+
+  background-color: #ff5c71;
+}

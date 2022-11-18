@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/DashBoard/dash-commons.css" />
     <link rel="stylesheet" href="../../css/DashBoard/left-aside.css" />
     <link rel="stylesheet" href="../../css/DashBoard/board-home.css" />
     <link rel="stylesheet" href="../../css/DashBoard/reserve-list.css" />
@@ -13,7 +14,7 @@
     <script src="../../js/jquery-3.6.1.min.js"></script>
     <script src="../../js/reserve-list.js"></script>
     <script src="../../js/number-comma.js"></script>
-    <title>예약 관리</title>
+    <title>예약 취소 관리</title>
   </head>
   <body id="bodyWrap">
     <!-- START aside-menu -->
@@ -54,9 +55,11 @@
       <div class="titleSection">
         <h1>예약 관리</h1>
         <ul class="mini-nav">
-          <li><p class="nav-item active" id="reserve-list">예약 리스트</p></li>
+          <li><p class="nav-item" id="reserve-list">예약 리스트</p></li>
           <li>
-            <p class="nav-item" id="reserve-cancel-list">예약 강제 취소</p>
+            <p class="nav-item active" id="reserve-cancel-list">
+              예약 강제 취소
+            </p>
           </li>
         </ul>
       </div>
@@ -96,12 +99,12 @@
             </div>
           </div>
 
-          <ul class="reserve-filter-list">
+          <!-- <ul class="reserve-filter-list">
             <li id="reserve-all" class="reserve-item active">전체</li>
             <li id="reserve-ing" class="reserve-item">예약중</li>
             <li id="reserve-cancel" class="reserve-item">취소</li>
             <li id="reserve-end" class="reserve-item">종료</li>
-          </ul>
+          </ul> -->
         </section>
         <!-- END reserve-header -->
 
@@ -109,13 +112,13 @@
           <div class="custom-table">
             <div class="ct-header reserve">
               <div class="ct-header-cell reserve">예약 날짜</div>
-              <div class="ct-header-cell reserve">진행 여부</div>
               <div class="ct-header-cell reserve">예약 공간</div>
               <div class="ct-header-cell reserve">예약자</div>
               <div class="ct-header-cell reserve">예약자 연락처</div>
               <div class="ct-header-cell reserve">예약자 이메일</div>
               <div class="ct-header-cell reserve">예약 금액</div>
               <div class="ct-header-cell reserve">결제 방식</div>
+              <div class="ct-header-cell reserve">강제 취소</div>
             </div>
             <!-- END ct-header -->
 
@@ -124,15 +127,16 @@
                 <div class="ct-body-cell">
                   2022.10.27 10:00 ~ <br />2022.10.17 14:00
                 </div>
-                <div class="ct-body-cell">
-                  <button class="ct-body-btn reserve-cancel">취소</button>
-                </div>
+
                 <div class="ct-body-cell">101호 개인 스터디름</div>
                 <div class="ct-body-cell">전판근</div>
                 <div class="ct-body-cell">010-1234-5678</div>
                 <div class="ct-body-cell">qwerasdf@gmail.com</div>
                 <div class="ct-body-cell reserve-price">40000</div>
                 <div class="ct-body-cell">선결제</div>
+                <div class="ct-body-cell">
+                  <button class="ct-body-btn force-cancel">취소</button>
+                </div>
               </div>
               <!-- END ct-body-row reserve -->
 
@@ -140,15 +144,16 @@
                 <div class="ct-body-cell">
                   2022.10.27 10:00 ~ <br />2022.10.17 14:00
                 </div>
-                <div class="ct-body-cell">
-                  <button class="ct-body-btn reserve-doing">진행중</button>
-                </div>
+
                 <div class="ct-body-cell">101호 개인 스터디름</div>
                 <div class="ct-body-cell">전판근</div>
                 <div class="ct-body-cell">010-1234-5678</div>
                 <div class="ct-body-cell">qwerasdf@gmail.com</div>
                 <div class="ct-body-cell reserve-price">40000</div>
                 <div class="ct-body-cell">선결제</div>
+                <div class="ct-body-cell">
+                  <button class="ct-body-btn force-cancel">취소</button>
+                </div>
               </div>
               <!-- END ct-body-row reserve -->
 
@@ -156,15 +161,16 @@
                 <div class="ct-body-cell">
                   2022.10.27 10:00 ~ <br />2022.10.17 14:00
                 </div>
-                <div class="ct-body-cell">
-                  <button class="ct-body-btn reserve-ing">예약중</button>
-                </div>
+
                 <div class="ct-body-cell">101호 개인 스터디름</div>
                 <div class="ct-body-cell">전판근</div>
                 <div class="ct-body-cell">010-1234-5678</div>
                 <div class="ct-body-cell">qwerasdf@gmail.com</div>
                 <div class="ct-body-cell reserve-price">40000</div>
                 <div class="ct-body-cell">선결제</div>
+                <div class="ct-body-cell">
+                  <button class="ct-body-btn force-cancel">취소</button>
+                </div>
               </div>
               <!-- END ct-body-row reserve -->
 
@@ -172,15 +178,16 @@
                 <div class="ct-body-cell">
                   2022.10.27 10:00 ~ <br />2022.10.17 14:00
                 </div>
-                <div class="ct-body-cell">
-                  <button class="ct-body-btn reserve-end">종료</button>
-                </div>
+
                 <div class="ct-body-cell">101호 개인 스터디름</div>
                 <div class="ct-body-cell">전판근</div>
                 <div class="ct-body-cell">010-1234-5678</div>
                 <div class="ct-body-cell">qwerasdf@gmail.com</div>
                 <div class="ct-body-cell reserve-price">40000</div>
                 <div class="ct-body-cell">선결제</div>
+                <div class="ct-body-cell">
+                  <button class="ct-body-btn force-cancel">취소</button>
+                </div>
               </div>
               <!-- END ct-body-row reserve -->
             </div>
@@ -227,5 +234,66 @@
       </div>
       <!-- boardWrap reserve -->
     </section>
+
+    <!-- popup background -->
+    <div class="popup-background blind">
+      <div id="popup-reserve-cancel" class="blind">
+        <div class="popupTitleSection">
+          <h3>예약을 정말 취소하시겠습니까?</h3>
+          <p>고객님의 예약을 취소시키시겠습니까?</p>
+          <p>예약 취소 후 재변경은 불가합니다</p>
+        </div>
+
+        <div class="btn-popup-group">
+          <button id="btn-popup-confirm">삭제</button>
+          <button id="btn-popup-close">닫기</button>
+        </div>
+      </div>
+      <!-- END popup-reserve-cancel-->
+
+      <div id="popup-write-cancel-email" class="blind">
+        <div class="popupTitleSection">
+          <h3>취소 메일을 작성해 주세요.</h3>
+          <p>작성된 메일이 고객님의 메일로 전송됩니다.</p>
+        </div>
+        <div>
+          <textarea
+            name="cancel-mail-text"
+            id="cancel-mail-text"
+            placeholder="메일 내용을 작성해 주세요."
+          ></textarea>
+        </div>
+
+        <div class="btn-popup-group">
+          <button id="btn-mail-popup-confirm">삭제</button>
+          <button id="btn-mail-popup-close">닫기</button>
+        </div>
+      </div>
+      <!-- END popup-write-cancel-email -->
+
+      <div id="popup-send-mail" class="blind">
+        <div class="popupTitleSection">
+          <h3>성공적으로 메일 발송 및 예약 취소를 하였습니다.</h3>
+        </div>
+
+        <div class="btn-popup-group">
+          <button id="btn-send-mail-popup-close">닫기</button>
+        </div>
+      </div>
+      <!-- END popup-send-mail-->
+    </div>
+    <!-- END popup-background -->
+    <div class="popup-background blind">
+      <div id="popup-warning" class="blind">
+        <div class="popupTitleSection">
+          <p>메일 내용을 입력해 주세요.</p>
+        </div>
+
+        <div class="btn-popup-group">
+          <button id="btn-warning-popup-close">닫기</button>
+        </div>
+      </div>
+      <!-- END popup-send-mail-->
+    </div>
   </body>
 </html>

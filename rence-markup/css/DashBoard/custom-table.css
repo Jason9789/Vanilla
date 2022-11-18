@@ -57,6 +57,11 @@
   cursor: default;
 }
 
+.ct-body-btn.force-cancel {
+  background-color: #ff5c71;
+  cursor: pointer;
+}
+
 .ct-body-btn.reserve-end {
   background-color: #ff5c71;
   cursor: default;
