@@ -21,31 +21,90 @@
 .host-info-list {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: calc(100% - 40px);
 
-  margin: 20px;
+  margin: 0 20px 20px 20px;
 
   justify-content: space-between;
+
+  border-bottom: 1px solid #e4e4e4;
 }
 
 .host-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+
+  width: 100%;
+
+  margin-bottom: 8px;
 }
 
 .host-item p {
   margin: 0;
-
-  width: 300px;
-
+  width: 150px;
+  font-weight: 700;
   margin-bottom: 12px;
 }
 
 .host-item span {
-  font-weight: 700;
-
-  width: 100%;
+  width: calc(100% - 150px);
   margin-bottom: 12px;
+}
+
+.host-item pre {
+  box-sizing: border-box;
+  width: calc(100% - 150px);
+  margin: 0 0 12px 0;
+
+  border: 1px solid #e4e4e4;
+  border-radius: 8px;
+
+  padding: 8px 12px;
+
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+.host-option-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: calc(100% - 150px);
+}
+
+.host-option-item {
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+/* ************ */
+/* 운영 시간 테이블 */
+/* ************ */
+.running-time-list {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+
+  font-size: 12px;
+
+  border: 1px solid #e4e4e4;
+  border-radius: 8px;
+
+  padding: 12px 12px 0 12px;
+  margin-bottom: 20px;
+}
+
+.running-time-item {
+  display: flex;
+}
+
+#running-time-day {
+  font-weight: 400;
+  width: 50px;
+}
+
+#running-time {
+  width: auto;
 }
 
 /* ************* */
