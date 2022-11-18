@@ -207,12 +207,22 @@
 
           <div class="inputWrap">
             <p>사업체 태그</p>
-            <input
-              type="text"
-              id="backoffice_tag"
-              name="backoffice_tag"
-              placeholder="사업체의 태그를 입력해 주세요"
-            />
+            <div class="hashTag_area">
+              <div class="hashTag-group">
+                <input
+                  type="hidden"
+                  value=""
+                  name="backoffice_tag"
+                  id="input-tag"
+                />
+              </div>
+              <input
+                type="text"
+                id="backoffice_tag"
+                placeholder="사업체의 태그를 입력해 주세요"
+              />
+              <ul id="tag-list"></ul>
+            </div>
           </div>
 
           <div class="inputWrap info">
@@ -225,7 +235,7 @@
           </div>
 
           <div class="inputWrap backoffice_type">
-            <p>공간 태그</p>
+            <p>공간 타입</p>
             <div class="option-group-column">
               <div class="option-group-row">
                 <div class="option-item">
@@ -885,13 +895,9 @@
           <!-- END inputWrap image -->
 
           <div class="submit">
-            <button
-              type="submit"
-              id="submit-application"
-              class="submit-application"
-            >
-              호스트 신청하기
-            </button>
+            <input type="button" id="submit" class="submit-application" value="호스트 신청하기">
+            <input type="submit" id="real-submit" class="submit-application" value="호스트 신청하기" style="display:none;">
+          </div>
           </div>
         </form>
       </div>
