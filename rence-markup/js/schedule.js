@@ -1,4 +1,7 @@
 $(function () {
+  // *************
+  // 전체 선택 체크박스
+  // *************
   $('#select-all-room').click(function () {
     console.log('asdf')
 
